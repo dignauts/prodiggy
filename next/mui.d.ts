@@ -1,5 +1,11 @@
 import '@mui/material';
+import { ComponentsOverrides, ComponentsVariants, Theme as MuiTheme } from '@mui/material/styles';
+
+import { PRODIGGY_LOGO_COMPONENT_NAME } from './components/logos/ProdiggyLogoComponent/prodiggyLogo.constants';
+import { ProdiggyLogoComponentProps } from './components/logos/ProdiggyLogoComponent/prodiggyLogo.props';
 // import { TypographyStyleOptions } from '@mui/material/styles/createTypography';
+
+type Theme = Omit<MuiTheme, 'components'>;
 
 declare module '@mui/material/styles' {
   interface BreakpointOverrides {
@@ -9,6 +15,22 @@ declare module '@mui/material/styles' {
     lg: true;
     xl: true;
     '2xl': true;
+  }
+  
+  interface Components {
+    [PRODIGGY_LOGO_COMPONENT_NAME]?: {
+      defaultProps?: ComponentsPropsList[PRODIGGY_LOGO_COMPONENT_NAME];
+      styleOverrides?: ComponentsOverrides<Theme>[PRODIGGY_LOGO_COMPONENT_NAME];
+      variants?: ComponentsVariants[PRODIGGY_LOGO_COMPONENT_NAME];
+    };
+  }
+
+  interface ComponentNameToClassKey {
+    [PRODIGGY_LOGO_COMPONENT_NAME]: 'logotype' | 'root';
+  }
+
+  interface ComponentsPropsList {
+    [PRODIGGY_LOGO_COMPONENT_NAME]: Partial<ProdiggyLogoComponentProps>;
   }
 
   // interface Palette {

@@ -1,0 +1,12 @@
+body {
+  font-family: var(--prodiggy-font-inter);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--prodiggy-font-plus-jakarta-sans);
+}
+
+::selection {
+  background-color: var(--mui-palette-primary-main);
+  color: var(--mui-palette-text-primary);
+}

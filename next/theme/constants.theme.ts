@@ -6,3 +6,10 @@ export enum BREAKPOINT {
   XL = 1200,
   '2XL' = 1400
 }
+
+export enum FONT_WEIGHT {
+  REGULAR = 400,
+  MEDIUM = 500,
+  SEMIBOLD = 600,
+  BOLD = 700,
+}

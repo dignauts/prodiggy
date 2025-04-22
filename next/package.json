@@ -7,6 +7,7 @@
     "@mui/material-nextjs": "^7.0.2",
     "clsx": "^2.1.1",
     "next": "15.3.1",
+    "normalize.css": "^8.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -31,7 +32,7 @@
     "check:port": "lsof -i :3000",
     "dev": "next dev --turbopack",
     "lint": "next lint",
-    "start": "next start"
+    "preview": "npx serve@latest out"
   },
   "version": "0.0.0"
 }

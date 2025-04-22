@@ -33,6 +33,7 @@ export default defineConfig([
         { blankLine: "always", prev: ["const", "let", "var"], next: "*" }
       ],
       'comma-dangle': ['error', 'never'],
+      'comma-spacing': ['error', { before: false, after: true }],
       'eol-last': ['error', 'always'],
       'import/order': ['error',
         {
@@ -73,18 +74,22 @@ export default defineConfig([
       react: reactPlugin
     },
     rules: {
+      'react/jsx-max-props-per-line': [
+        'error',
+        { maximum: 2 }
+      ],
+      'react/jsx-first-prop-new-line': ['error', 'multiline'],
       'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
       'react/jsx-curly-spacing': ['error', { attributes: false, children: true, when: 'always' }],
       'react/jsx-filename-extension': 'off',
-      'react/jsx-max-props-per-line': ['error', { maximum: 2 }],
       'react/jsx-props-no-spreading': 'off',
       'react/jsx-sort-props': [2,
         {
-          callbacksLast: true,
-          ignoreCase: true,
-          noSortAlphabetically: false,
+          callbacksLast: false,
           shorthandFirst: false,
-          shorthandLast: true
+          shorthandLast: false,
+          ignoreCase: true,
+          noSortAlphabetically: false
         }
       ],
       'react/jsx-uses-react': 'off',

@@ -1,5 +1,3 @@
 export interface ProdiggyLogoComponentProps {
-  size?: ProdiggyLogoComponentSize;
+  color?: 'primary' | 'textPrimary'
 }
-
-export type ProdiggyLogoComponentSize = 'large';
