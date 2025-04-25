@@ -1,10 +1,10 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-import { FlatCompat } from "@eslint/eslintrc";
+import { FlatCompat } from '@eslint/eslintrc';
 import stylisticPlugin from '@stylistic/eslint-plugin';
-import { defineConfig } from "eslint/config";
-import reactPlugin from "eslint-plugin-react";
+import { defineConfig } from 'eslint/config';
+import reactPlugin from 'eslint-plugin-react';
 import globals from 'globals';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -16,7 +16,7 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
     files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
     plugins: {
@@ -24,14 +24,16 @@ export default defineConfig([
     },
     rules: {
       '@stylistic/indent': ['error', 2],
-      '@stylistic/no-multiple-empty-lines': ["error", { max: 1, maxBOF: 0 }],
+      '@stylistic/no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0 }],
       '@stylistic/padding-line-between-statements': [
-        "error",
-        { blankLine: "always", prev: "import", next: "*" },
-        { blankLine: "any", prev: "import", next: "import" },
-        { blankLine: "always", prev: "*", next: "return" },
-        { blankLine: "always", prev: ["const", "let", "var"], next: "*" }
+        'error',
+        { blankLine: 'always', prev: 'import', next: '*' },
+        { blankLine: 'any', prev: 'import', next: 'import' },
+        { blankLine: 'always', prev: '*', next: 'return' },
+        { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' }
       ],
+      quotes: ['error', 'single', { avoidEscape: true }],
+      'quote-props': ['error', 'as-needed'],
       'comma-dangle': ['error', 'never'],
       'comma-spacing': ['error', { before: false, after: true }],
       'eol-last': ['error', 'always'],
@@ -55,7 +57,7 @@ export default defineConfig([
       'no-console': ['warn', { allow: ['error'] }],
       'object-curly-spacing': ['error', 'always'],
       'object-shorthand': ['error', 'always'],
-      'semi': ['error', 'always']
+      semi: ['error', 'always']
     }
   },
   {
@@ -74,6 +76,11 @@ export default defineConfig([
       react: reactPlugin
     },
     rules: {
+      'react/jsx-closing-tag-location': 'error',
+      'react/jsx-curly-brace-presence': ['error', {
+        props: 'never',
+        children: 'ignore'
+      }],
       'react/jsx-max-props-per-line': [
         'error',
         { maximum: 2 }
@@ -93,16 +100,16 @@ export default defineConfig([
         }
       ],
       'react/jsx-uses-react': 'off',
-      "react/jsx-tag-spacing": ["error", {
-        "beforeSelfClosing": "always", 
-        "afterOpening": "never",
-        "beforeClosing": "never"
+      'react/jsx-tag-spacing': ['error', {
+        beforeSelfClosing: 'always', 
+        afterOpening: 'never',
+        beforeClosing: 'never'
       }],
-      "react/self-closing-comp": ["error", {
-        "component": true,
-        "html": true
+      'react/self-closing-comp': ['error', {
+        component: true,
+        html: true
       }],
-      "react/destructuring-assignment": ["warn", "always"],
+      'react/destructuring-assignment': ['warn', 'always'],
       'react/no-array-index-key': 'off',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',

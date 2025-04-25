@@ -1,10 +1,10 @@
 'use client';
 
-import { styled, Typography, TypographyProps } from "@mui/material";
+import { styled, Typography, TypographyProps } from '@mui/material';
 
-import { PRODIGGY_LOGO_COMPONENT_NAME } from "#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.constants";
-import { ProdiggyLogoComponentProps } from "#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.props";
-import { FONT_WEIGHT } from "#da/theme/constants.theme";
+import { PRODIGGY_LOGO_COMPONENT_NAME } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.constants';
+import { ProdiggyLogoComponentProps } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.props';
+import { FONT_WEIGHT } from '#da/theme/constants.theme';
 
 export const ProdiggyLogoLogotypeAtom = styled(Typography, {
   name: PRODIGGY_LOGO_COMPONENT_NAME,

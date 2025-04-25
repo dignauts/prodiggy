@@ -1,11 +1,18 @@
-import { ThemeOptions } from "@mui/material";
+import { ThemeOptions } from '@mui/material';
 
-import { responsiveFontSize } from "#da/theme/utils/responsiveFontSize.util";
+import { responsiveFontSize } from '#da/theme/utils/responsiveFontSize.util';
 
 export const components: ThemeOptions['components'] = {
   MuiButton: {
     defaultProps: {
       variant: 'contained'
+    }
+  },
+  MuiLink: {
+    styleOverrides: {
+      root: {
+        fontFamily: 'var(--prodiggy-font-inter)'
+      }
     }
   },
   MuiContainer: {
@@ -15,13 +22,18 @@ export const components: ThemeOptions['components'] = {
   },
   MuiSvgIcon: {
     styleOverrides: {
-      'fontSizeLarge': {
+      fontSizeLarge: {
         fontSize: responsiveFontSize(40, 'rem')
       }
     }
   },
+  LinkComponent: {
+    defaultProps: {
+      color: 'textSecondary'
+    }
+  },
   ProdiggyLogoComponent: {
-    'defaultProps': {
+    defaultProps: {
       color: 'textPrimary'
     }
   }

@@ -1,9 +1,11 @@
 import '@mui/material';
 import { ComponentsOverrides, ComponentsVariants, Theme as MuiTheme } from '@mui/material/styles';
+import { TypographyStyleOptions } from '@mui/material/styles/createTypography';
 
 import { PRODIGGY_LOGO_COMPONENT_NAME } from './components/logos/ProdiggyLogoComponent/prodiggyLogo.constants';
 import { ProdiggyLogoComponentProps } from './components/logos/ProdiggyLogoComponent/prodiggyLogo.props';
-// import { TypographyStyleOptions } from '@mui/material/styles/createTypography';
+import { LINK_COMPONENT_NAME } from './components/main/LinkComponent/link.constants';
+import { LinkComponentProps } from './components/main/LinkComponent/link.props';
 
 type Theme = Omit<MuiTheme, 'components'>;
 
@@ -18,18 +20,25 @@ declare module '@mui/material/styles' {
   }
   
   interface Components {
+    [LINK_COMPONENT_NAME]?: {
+      defaultProps?: ComponentsPropsList['LinkComponent'];
+      styleOverrides?: ComponentsOverrides<Theme>['LinkComponent'];
+      variants?: ComponentsVariants['LinkComponent'];
+    };
     [PRODIGGY_LOGO_COMPONENT_NAME]?: {
-      defaultProps?: ComponentsPropsList[PRODIGGY_LOGO_COMPONENT_NAME];
-      styleOverrides?: ComponentsOverrides<Theme>[PRODIGGY_LOGO_COMPONENT_NAME];
-      variants?: ComponentsVariants[PRODIGGY_LOGO_COMPONENT_NAME];
+      defaultProps?: ComponentsPropsList['ProdiggyLogoComponent'];
+      styleOverrides?: ComponentsOverrides<Theme>['ProdiggyLogoComponent'];
+      variants?: ComponentsVariants['ProdiggyLogoComponent'];
     };
   }
 
   interface ComponentNameToClassKey {
+    [LINK_COMPONENT_NAME]: 'root';
     [PRODIGGY_LOGO_COMPONENT_NAME]: 'logotype' | 'root';
   }
 
   interface ComponentsPropsList {
+    [LINK_COMPONENT_NAME]: Partial<LinkComponentProps>;
     [PRODIGGY_LOGO_COMPONENT_NAME]: Partial<ProdiggyLogoComponentProps>;
   }
 
@@ -43,19 +52,13 @@ declare module '@mui/material/styles' {
   //   green?: PaletteOptions['grey'];
   // }
 
-  // interface TypographyVariants {
-  //   bodyM: TypographyStyleOptions;
-  //   bodyXL: TypographyStyleOptions;
-  //   bodyXXL: TypographyStyleOptions;
-  //   h7: TypographyStyleOptions;
-  // }
+  interface TypographyVariants {
+    p4: TypographyStyleOptions;
+  }
 
-  // interface TypographyVariantsOptions {
-  //   bodyM?: TypographyStyleOptions;
-  //   bodyXL?: TypographyStyleOptions;
-  //   bodyXXL?: TypographyStyleOptions;
-  //   h7?: TypographyStyleOptions;
-  // }
+  interface TypographyVariantsOptions {
+    p4?: TypographyStyleOptions;
+  }
 }
 
 // declare module '@mui/material/Button' {
@@ -66,10 +69,7 @@ declare module '@mui/material/styles' {
 // }
 
 declare module '@mui/material/Typography' {
-  // interface TypographyPropsVariantOverrides {
-  //   bodyM: true;
-  //   bodyXL: true;
-  //   bodyXXL: true;
-  //   h7: true;
-  // }
+  interface TypographyPropsVariantOverrides {
+    p4: true;
+  }
 }

@@ -1,13 +1,13 @@
 'use client';
 
-import { useThemeProps } from "@mui/material";
-import { forwardRef } from "react";
+import { useThemeProps } from '@mui/material';
+import { forwardRef } from 'react';
 
-import ProdiggyIconComponent from "#da/components/icons/ProdiggyIconComponent";
-import { ProdiggyLogoRootAtom, ProdiggyLogoLogotypeAtom } from "#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.atoms";
-import { PRODIGGY_LOGO_CLASS_NAME, PRODIGGY_LOGO_COMPONENT_NAME } from "#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.constants";
-import { ProdiggyLogoComponentProps } from "#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.props";
-import { COMPANY_NAME } from "#da/constants/common.constants";
+import ProdiggyIconComponent from '#da/components/icons/ProdiggyIconComponent';
+import { ProdiggyLogoRootAtom, ProdiggyLogoLogotypeAtom } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.atoms';
+import { PRODIGGY_LOGO_CLASS_NAME, PRODIGGY_LOGO_COMPONENT_NAME } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.constants';
+import { ProdiggyLogoComponentProps } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.props';
+import { COMPANY_NAME } from '#da/constants/common.constants';
 
 const ProdiggyLogoComponent = forwardRef<HTMLDivElement, ProdiggyLogoComponentProps>((props, ref) => {
   const themeProps = useThemeProps({ props, name: PRODIGGY_LOGO_COMPONENT_NAME });

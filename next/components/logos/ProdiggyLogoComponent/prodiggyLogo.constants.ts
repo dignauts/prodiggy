@@ -1,4 +1,4 @@
-import { defineClassName } from "#da/theme/utils/defineClassName.util";
+import { defineClassName } from '#da/theme/utils/defineClassName.util';
 
 export const PRODIGGY_LOGO_COMPONENT_NAME = 'ProdiggyLogoComponent';
 
