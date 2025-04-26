@@ -1,6 +1,6 @@
 'use client';
 
-import { styled, Typography, TypographyProps } from '@mui/material';
+import { Box, styled, Typography, TypographyProps } from '@mui/material';
 
 import { PRODIGGY_LOGO_COMPONENT_NAME } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.constants';
 import { ProdiggyLogoComponentProps } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.props';
@@ -15,7 +15,7 @@ export const ProdiggyLogoLogotypeAtom = styled(Typography, {
   textTransform: 'capitalize'
 }));
 
-export const ProdiggyLogoRootAtom = styled('div', {
+export const ProdiggyLogoRootAtom = styled(Box, {
   name: PRODIGGY_LOGO_COMPONENT_NAME,
   overridesResolver: (_, styles) => styles.root,
   slot: 'root'

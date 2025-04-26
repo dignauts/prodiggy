@@ -32,6 +32,7 @@ export default defineConfig([
         { blankLine: 'always', prev: '*', next: 'return' },
         { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' }
       ],
+      'arrow-body-style': ['error', 'as-needed'],
       quotes: ['error', 'single', { avoidEscape: true }],
       'quote-props': ['error', 'as-needed'],
       'comma-dangle': ['error', 'never'],

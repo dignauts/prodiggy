@@ -10,13 +10,14 @@ import { ProdiggyLogoComponentProps } from '#da/components/logos/ProdiggyLogoCom
 import { COMPANY_NAME } from '#da/constants/common.constants';
 
 const ProdiggyLogoComponent = forwardRef<HTMLDivElement, ProdiggyLogoComponentProps>((props, ref) => {
-  const themeProps = useThemeProps({ props, name: PRODIGGY_LOGO_COMPONENT_NAME });
+  const { color, ...themeProps } = useThemeProps({ props, name: PRODIGGY_LOGO_COMPONENT_NAME });
 
   return (
     <ProdiggyLogoRootAtom
       className={PRODIGGY_LOGO_CLASS_NAME.ROOT} 
-      color={themeProps.color || 'textPrimary'}
+      color={color || 'textPrimary'}
       ref={ref}
+      {...themeProps}
     >
       <ProdiggyIconComponent className={PRODIGGY_LOGO_CLASS_NAME.LOGOMARK} fontSize="large" />
       <ProdiggyLogoLogotypeAtom

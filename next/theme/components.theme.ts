@@ -27,6 +27,22 @@ export const components: ThemeOptions['components'] = {
       }
     }
   },
+  MuiTooltip: {
+    defaultProps: {
+      arrow: true
+    },
+    styleOverrides: {
+      arrow: {
+        color: 'var(--mui-palette-grey-400)'
+      },
+      tooltip: {
+        backgroundColor: 'var(--mui-palette-grey-500)',
+        border: '1px solid var(--mui-palette-grey-400)',
+        borderRadius: 4,
+        color: 'var(--mui-palette-text-primary)'
+      }
+    }
+  },
   LinkComponent: {
     defaultProps: {
       color: 'textSecondary'
