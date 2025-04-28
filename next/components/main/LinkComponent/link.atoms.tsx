@@ -15,7 +15,7 @@ export const LinkRootAtom = styled(MuiLink, {
   ...(color === 'navigation' && {
     color: 'var(--mui-palette-common-white)',
     '&:hover': {
-      color: 'var(--mui-palette-primary-400)'
+      color: 'var(--mui-palette-secondary-400)'
     }
   }),
   ...(color === 'textSecondary' && {

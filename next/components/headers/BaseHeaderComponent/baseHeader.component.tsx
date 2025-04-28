@@ -2,7 +2,7 @@ import { Box, Container } from '@mui/material';
 import { forwardRef, PropsWithChildren } from 'react';
 
 import { BASE_HEADER_CLASS_NAME, BASE_HEADER_COMPONENT_NAME } from '#da/components/headers/BaseHeaderComponent/baseHeader.constant';
-import LinkedProdiggyLogoComponent from '#da/components/logos/LinkedProdiggyLogoComponent/linkedProdiggyLogo.component';
+import LinkedProdiggyLogoComponent from '#da/modules/logos/LinkedProdiggyLogoModule/linkedProdiggyLogo.module';
 import '#da/components/headers/BaseHeaderComponent/baseHeader.styles.css';
 
 const BaseHeaderComponent = forwardRef<HTMLDivElement, PropsWithChildren>(({ children }, ref) => (
@@ -11,7 +11,7 @@ const BaseHeaderComponent = forwardRef<HTMLDivElement, PropsWithChildren>(({ chi
     component="header"
     ref={ref}
   >
-    <Container>
+    <Container className={BASE_HEADER_CLASS_NAME.CONTAINER}>
       <LinkedProdiggyLogoComponent />
       { children }
     </Container>

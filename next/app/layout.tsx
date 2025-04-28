@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale } from 'next-intl/server';
 import { PropsWithChildren } from 'react';
 
 import CacheProviderModule from '#da/modules/providers/CacheProviderModule';
@@ -24,14 +26,20 @@ export const metadata: Metadata = {
   title: 'Prodiggy'
 };
 
-const RootLayout = ({ children }: PropsWithChildren) => (
-  <html lang="en">
-    <body className={clsx(inter.variable, plusJakartaSans.variable)}>
-      <CacheProviderModule>
-        { children }
-      </CacheProviderModule>
-    </body>
-  </html>
-);
+const RootLayout = async ({ children }: PropsWithChildren) => {
+  const locale = await getLocale();
+
+  return (
+    <html lang={locale}>
+      <body className={clsx(inter.variable, plusJakartaSans.variable)}>
+        <CacheProviderModule>
+          <NextIntlClientProvider>
+            { children }
+          </NextIntlClientProvider>
+        </CacheProviderModule>
+      </body>
+    </html>
+  );
+};
 
 export default RootLayout;

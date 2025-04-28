@@ -1,6 +1,7 @@
 'use client';
 
 import { useThemeProps } from '@mui/material';
+import clsx from 'clsx';
 import Link from 'next/link';
 import { forwardRef } from 'react';
 
@@ -9,18 +10,19 @@ import { LINK_CLASS_NAME, LINK_COMPONENT_NAME } from '#da/components/main/LinkCo
 import { LinkComponentProps } from '#da/components/main/LinkComponent/link.props';
 
 const LinkComponent = forwardRef<HTMLAnchorElement, LinkComponentProps>((props, ref) => {
-  const { children, ...themeProps } = useThemeProps({ props, name: LINK_COMPONENT_NAME });
+  const { children, className, color, fontWeight, to, variant, ...themeProps } = useThemeProps({ props, name: LINK_COMPONENT_NAME });
 
   return (
     <LinkRootAtom
-      className={LINK_CLASS_NAME.ROOT}
-      color={themeProps.color}
+      className={clsx(LINK_CLASS_NAME.ROOT, className)}
+      color={color}
       component={Link}
-      fontWeight={themeProps.fontWeight}
-      href={themeProps.to}
+      fontWeight={fontWeight}
+      href={to}
       ref={ref}
       underline='none'
-      variant={themeProps.variant}
+      variant={variant}
+      {...themeProps}
     >
       { children }
     </LinkRootAtom>

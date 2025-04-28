@@ -1,0 +1,9 @@
+.DaLinkedProdiggyLogoModule-root {
+  display: block;
+  max-width: fit-content;
+}
+
+.DaLinkedProdiggyLogoModule-root .DaProdiggyLogoComponent-root:hover {
+  color: var(--mui-palette-secondary-400);
+  transition: color 0.3s ease-in-out;
+}

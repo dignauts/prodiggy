@@ -31,6 +31,19 @@ export const darkPalette: ThemeOptions['palette'] = {
     900: '#060521',
     main: '#4F46E5'
   },
+  secondary: {
+    50: '#f1e7fa',
+    100: '#d9c3f3',
+    200: '#c09aed',
+    300: '#a76fe6',
+    400: '#934ce0',
+    500: '#7e23d9',
+    600: '#731dd3',
+    700: '#6510ca',
+    800: '#5704c4',
+    900: '#3f00bb',
+    main: '#7e23d9'
+  },
   text: {
     primary: '#FFFFFF',
     secondary: '#9EA3B9'

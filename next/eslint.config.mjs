@@ -8,9 +8,7 @@ import reactPlugin from 'eslint-plugin-react';
 import globals from 'globals';
 
 const __filename = fileURLToPath(import.meta.url);
-
 const __dirname = dirname(__filename);
-
 const compat = new FlatCompat({
   baseDirectory: __dirname
 });
@@ -30,7 +28,8 @@ export default defineConfig([
         { blankLine: 'always', prev: 'import', next: '*' },
         { blankLine: 'any', prev: 'import', next: 'import' },
         { blankLine: 'always', prev: '*', next: 'return' },
-        { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' }
+        { blankLine: 'always', prev: ['const', 'let', 'var'], next: ['if', 'switch', 'for', 'while', 'function', 'return', 'block-like'] },
+        { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] }
       ],
       'arrow-body-style': ['error', 'as-needed'],
       quotes: ['error', 'single', { avoidEscape: true }],
