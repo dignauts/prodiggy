@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getLocale } from 'next-intl/server';
 import { PropsWithChildren } from 'react';
 
-import CacheProviderModule from '#da/modules/providers/CacheProviderModule';
+import CacheProviderModule from '#da/modules/providers/cacheProvider.module';
 import '#da/theme/css/globals.css';
 
 const inter = Inter({

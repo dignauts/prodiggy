@@ -3,15 +3,16 @@ import { LinkProps } from 'next/link';
 import { AnchorHTMLAttributes, ReactNode } from 'react';
 
 import { LinkAPI } from '#da/types/api/common.api';
-import { Style } from '#da/types/ui.types';
+import { BaseComponentProps } from '#da/types/props/common.props';
 
 export interface LinkComponentProps 
   extends Pick<MuiLinkProps, 'fontWeight' | 'variant'>, Omit<LinkProps, 'as' | 'href'>,
-  Pick<LinkAPI, 'to'>,
-  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'> {
+  Pick<LinkAPI, 'isExternal' | 'to'>,
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'className' | 'href'>,
+  BaseComponentProps {
   children: ReactNode;
   color?: 'navigation' | 'textSecondary';
-  sx?: Style
+  isActive?: boolean;
 }
 
 export type LinkRootAtomProps = 

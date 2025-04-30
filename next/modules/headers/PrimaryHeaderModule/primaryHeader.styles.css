@@ -1,0 +1,5 @@
+.DaPrimaryHeaderModule-root .DaBaseHeaderComponent-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}

@@ -4,6 +4,6 @@
 }
 
 .DaLinkedProdiggyLogoModule-root .DaProdiggyLogoComponent-root:hover {
-  color: var(--mui-palette-secondary-400);
+  color: var(--mui-palette-secondary-main);
   transition: color 0.3s ease-in-out;
 }

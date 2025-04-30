@@ -3,7 +3,7 @@
 import { useThemeProps } from '@mui/material';
 import { forwardRef } from 'react';
 
-import ProdiggyIconComponent from '#da/components/icons/ProdiggyIconComponent';
+import ProdiggyIconComponent from '#da/components/icons/prodiggyIcon.component';
 import { ProdiggyLogoRootAtom, ProdiggyLogoLogotypeAtom } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.atoms';
 import { PRODIGGY_LOGO_CLASS_NAME, PRODIGGY_LOGO_COMPONENT_NAME } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.constants';
 import { ProdiggyLogoComponentProps } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.props';

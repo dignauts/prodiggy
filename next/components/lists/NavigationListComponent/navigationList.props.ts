@@ -1,8 +1,10 @@
-import { LinkComponentProps } from '#da/components/main/LinkComponent/link.props';
-import { LinkAPI } from '#da/types/api/common.api';
+import { ReactNode } from 'react';
 
-export interface NavigationListComponentProps {
+import { BaseLinkAPI } from '#da/types/api/common.api';
+import { BaseComponentProps } from '#da/types/props/common.props';
+
+export interface NavigationListComponentProps<T extends BaseLinkAPI> extends BaseComponentProps {
   gap?: number;
-  items: LinkAPI[];
-  linkComponentProps?: Omit<LinkComponentProps, 'children'>;
+  items: T[];
+  render: (props: T) => ReactNode;
 }

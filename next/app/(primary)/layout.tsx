@@ -1,10 +1,10 @@
 import { FC, PropsWithChildren } from 'react';
 
-import BaseHeaderComponent from '#da/components/headers/BaseHeaderComponent';
+import PrimaryHeaderModule from '#da/modules/headers/PrimaryHeaderModule';
 
 const PrimaryLayout: FC<PropsWithChildren> = ({ children }) => (
   <>
-    <BaseHeaderComponent />
+    <PrimaryHeaderModule />
     { children }
   </>
 );

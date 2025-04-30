@@ -1,5 +1,12 @@
 {
   "button": {
     "return_to_home": "Return to Home"
+  },
+  "navigation": {
+    "blog": "Blog",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "features": "Features",
+    "home": "Home"
   }
 }

@@ -32,17 +32,17 @@ export const darkPalette: ThemeOptions['palette'] = {
     main: '#4F46E5'
   },
   secondary: {
-    50: '#f1e7fa',
-    100: '#d9c3f3',
-    200: '#c09aed',
-    300: '#a76fe6',
-    400: '#934ce0',
-    500: '#7e23d9',
-    600: '#731dd3',
-    700: '#6510ca',
-    800: '#5704c4',
-    900: '#3f00bb',
-    main: '#7e23d9'
+    50: '#fff2df',
+    100: '#ffddb0',
+    200: '#ffc77d',
+    300: '#ffaf49',
+    400: '#ff9e22',
+    500: '#ff8d00',
+    600: '#fa8100',
+    700: '#f47100',
+    800: '#ee6002',
+    900: '#e54304',
+    main: '#ff8d00'
   },
   text: {
     primary: '#FFFFFF',

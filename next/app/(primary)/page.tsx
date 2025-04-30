@@ -1,8 +1,6 @@
-import NavigationListComponent from '#da/components/lists/NavigationListComponent';
-
 const Home = () => (
   <div>
-    <NavigationListComponent items={[{ name: 'Link', to: '/link' }]} />
+    HOME
   </div>
 );
 

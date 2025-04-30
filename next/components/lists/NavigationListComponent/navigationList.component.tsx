@@ -1,36 +1,34 @@
+'use client';
+
 import { Box, Stack } from '@mui/material';
 import clsx from 'clsx';
-import { forwardRef } from 'react';
 
-import { NAVIGATION_LIST_CLASS_NAME, NAVIGATION_LIST_COMPONENT_NAME } from '#da/components/lists/NavigationListComponent/navigationList.constants';
+import { NAVIGATION_LIST_CLASS_NAME } from '#da/components/lists/NavigationListComponent/navigationList.constants';
 import { NavigationListComponentProps } from '#da/components/lists/NavigationListComponent/navigationList.props';
-import LinkComponent from '#da/components/main/LinkComponent';
+import { BaseLinkAPI } from '#da/types/api/common.api';
 
-const NavigationListComponent = forwardRef<HTMLUListElement, NavigationListComponentProps>(
-  ({ gap, items, linkComponentProps }, ref) => (
-    <Stack
-      className={clsx('prodiggy-list--reset', NAVIGATION_LIST_CLASS_NAME.ROOT)}
-      component="ul"
-      gap={gap}
-      ref={ref}
-    >
-      {
-        items.map((link, index) => (
-          <Box
-            className={NAVIGATION_LIST_CLASS_NAME.LIST_ITEM}
-            component="li"
-            key={`NavigationListComponent-${link.name}-${link.to}-${index}`}
-          >
-            <LinkComponent {...linkComponentProps} to={link.to}>
-              { link.name }
-            </LinkComponent>
-          </Box>
-        ))
-      }
-    </Stack>
-  ));
-
-NavigationListComponent.displayName = NAVIGATION_LIST_COMPONENT_NAME;
+const NavigationListComponent = <T extends BaseLinkAPI>({
+  className, gap, items, render, sx
+}: NavigationListComponentProps<T>) => (
+  <Stack
+    className={clsx('prodiggy-list--reset', NAVIGATION_LIST_CLASS_NAME.ROOT, className)}
+    component="ul"
+    gap={gap}
+    sx={sx}
+  >
+    {
+      items.map((item, index) => (
+        <Box
+          className={NAVIGATION_LIST_CLASS_NAME.LIST_ITEM}
+          component="li"
+          key={`NavigationListComponent-${item.to}-${index}`}
+        >
+          { render(item) }
+        </Box>
+      ))
+    }
+  </Stack>
+);
 
 export default NavigationListComponent;
 
