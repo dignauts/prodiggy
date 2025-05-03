@@ -9,9 +9,9 @@ import { INTERNAL_ROUTES } from '#da/constants/routing.constants';
 import { useMediaQuery } from '#da/hooks/useMediaQuery';
 import { LINKED_PRODIGGY_LOGO_CLASS_NAME } from '#da/modules/logos/LinkedProdiggyLogoModule/linkedProdiggyLogo.constants';
 
-import '#da/modules/logos/LinkedProdiggyLogoModule/linkedProdiggyLogo.styles.css';
+import '#da/modules/logos/LinkedProdiggyLogoModule/linkedProdiggyLogo.styles.scss';
 
-const LinkedProdiggyLogoComponent = () => {
+const LinkedProdiggyLogoModule = () => {
   const t = useTranslations();
   const isMobile = useMediaQuery({ breakpoint: 'sm' });
 
@@ -24,4 +24,4 @@ const LinkedProdiggyLogoComponent = () => {
   );
 };
 
-export default LinkedProdiggyLogoComponent;
+export default LinkedProdiggyLogoModule;

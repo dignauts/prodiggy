@@ -1,0 +1,10 @@
+@use '../../../theme/css/responsive.scss' as responsive;
+
+.DaProdiggyLogoComponent {
+  &-logomark {
+    @include responsive.mq(md) {
+      height: 0.8em;
+      width: 0.8em;
+    }
+  }
+}

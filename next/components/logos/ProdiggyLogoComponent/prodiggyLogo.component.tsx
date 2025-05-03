@@ -8,6 +8,7 @@ import { ProdiggyLogoRootAtom, ProdiggyLogoLogotypeAtom } from '#da/components/l
 import { PRODIGGY_LOGO_CLASS_NAME, PRODIGGY_LOGO_COMPONENT_NAME } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.constants';
 import { ProdiggyLogoComponentProps } from '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.props';
 import { COMPANY_NAME } from '#da/constants/common.constants';
+import '#da/components/logos/ProdiggyLogoComponent/prodiggyLogo.styles.scss';
 
 const ProdiggyLogoComponent = forwardRef<HTMLDivElement, ProdiggyLogoComponentProps>((props, ref) => {
   const { color, ...themeProps } = useThemeProps({ props, name: PRODIGGY_LOGO_COMPONENT_NAME });

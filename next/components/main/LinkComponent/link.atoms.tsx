@@ -15,11 +15,11 @@ export const LinkRootAtom = styled(MuiLink, {
   ...(color === 'navigation' && {
     color: 'var(--mui-palette-common-white)',
     '&:hover': {
-      color: 'var(--mui-palette-secondary-main)'
+      color: 'var(--mui-palette-grey-400)'
     }
   }),
   ...(color === 'navigation' && isActive && {
-    color: 'var(--mui-palette-secondary-main)'
+    color: 'var(--mui-palette-grey-400)'
   }),
   ...(color === 'textSecondary' && {
     color: 'var(--mui-palette-text-secondary)',

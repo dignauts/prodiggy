@@ -20,6 +20,13 @@ export const components: ThemeOptions['components'] = {
       maxWidth: '2xl'
     }
   },
+  MuiDrawer: {
+    styleOverrides: {
+      paper: {
+        background: 'var(--mui-palette-grey-500)'
+      }
+    }
+  },  
   MuiSvgIcon: {
     styleOverrides: {
       fontSizeLarge: {

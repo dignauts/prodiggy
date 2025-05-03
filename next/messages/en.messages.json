@@ -2,6 +2,10 @@
   "button": {
     "return_to_home": "Return to Home"
   },
+  "hamburger": {
+    "close": "Close menu",
+    "open": "Open menu"
+  },
   "navigation": {
     "blog": "Blog",
     "contact": "Contact",

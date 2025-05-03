@@ -1,0 +1,13 @@
+.DaPrimaryNavigationListModule {
+  &-root {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    & .DaLinkComponent {
+      &-root {
+        padding: 4px;
+      }
+    }
+  }
+}

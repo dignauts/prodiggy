@@ -1,0 +1,23 @@
+@use 'sass:map';
+
+$prodiggy-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  2xl: 1400px
+);
+
+@mixin mq($breakpoint, $type: max) {
+  $value: map.get($prodiggy-breakpoints, $breakpoint);
+
+  @if not $value {
+    @warn "Unknown breakpoint `#{$breakpoint}`.";
+  } @else if $type != max and $type != min {
+    @warn "Invalid type `#{$type}`. Use 'max' or 'min'.";
+  } @else {
+    @media (#{$type}-width: #{$value}) {
+      @content;
+    }
+  }
+}

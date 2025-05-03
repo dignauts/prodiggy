@@ -1,0 +1,15 @@
+.DaLinkedProdiggyLogoModule {
+  &-root {
+    display: block;
+    max-width: fit-content;
+
+    & .DaProdiggyLogoComponent {
+      &-root {
+        &:hover {
+          // color: var(--mui-palette-secondary-main);
+          transition: color 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.DaHamburgerButtonComponent {
+  &-root {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    height: calc(
+      var(--prodiggy-hamburger-button-ingredient-height) + var(--prodiggy-hamburger-button-gap) * 2
+    );
+    padding: 0;
+    position: relative;
+    width: var(--prodiggy-hamburger-button-width);
+  }
+
+  &-ingredient {
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 
+      background 200ms 250ms cubic-bezier(0.23, 1, 0.32, 1), 
+      transform 200ms 250ms cubic-bezier(0.23, 1, 0.32, 1);
+
+    &, &::before, &::after {
+      background: var(--mui-palette-hamburgerButton-ingredient);
+      border-radius: 2px;
+      height: var(--prodiggy-hamburger-button-ingredient-height);
+      left: 0;
+      position: absolute;
+      width: var(--prodiggy-hamburger-button-width);
+    }
+
+    &::before, &::after {
+      content: "";
+      display: block;
+      transition: 
+        background .25s ease-out, 
+        transform 200ms 250ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    &::before {
+      top: var(--prodiggy-hamburger-button-gap);
+    }
+
+    &::after {
+      bottom: var(--prodiggy-hamburger-button-gap);
+    }
+  }
+
+  &--open {
+    & .DaHamburgerButtonComponent {
+      &-ingredient {
+        background: transparent;
+        transform: rotate(45deg);
+
+        &::before {
+          transform: translateY(calc(-1 *var(--prodiggy-hamburger-button-gap))) rotate(180deg);
+        }
+
+        &::after {
+          transform: translateY(var(--prodiggy-hamburger-button-gap)) rotate(90deg);
+        }
+      }
+    }
+  }
+}

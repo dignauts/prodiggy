@@ -1,5 +1,12 @@
 @import './reset.css';
 
+:root {
+  /* Components */
+  --prodiggy-hamburger-button-width: 28px;
+  --prodiggy-hamburger-button-gap: 8px;
+  --prodiggy-hamburger-button-ingredient-height: 3px;
+}
+
 body {
   font-family: var(--prodiggy-font-inter);
 }

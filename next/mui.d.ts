@@ -6,6 +6,7 @@ import { PRODIGGY_LOGO_COMPONENT_NAME } from './components/logos/ProdiggyLogoCom
 import { ProdiggyLogoComponentProps } from './components/logos/ProdiggyLogoComponent/prodiggyLogo.props';
 import { LINK_COMPONENT_NAME } from './components/main/LinkComponent/link.constants';
 import { LinkComponentProps } from './components/main/LinkComponent/link.props';
+import { HamburgerButtonPalette } from './types/mui.types';
 
 type Theme = Omit<MuiTheme, 'components'>;
 
@@ -42,15 +43,15 @@ declare module '@mui/material/styles' {
     [PRODIGGY_LOGO_COMPONENT_NAME]: Partial<ProdiggyLogoComponentProps>;
   }
 
-  // interface Palette {
-  //   darkGreen: Palette['grey'];
-  //   green: Palette['grey'];
-  // }
+  interface Palette {
+    hamburgerButton: HamburgerButtonPalette;
+    // green: Palette['grey'];
+  }
 
-  // interface PaletteOptions {
-  //   darkGreen?: PaletteOptions['grey'];
-  //   green?: PaletteOptions['grey'];
-  // }
+  interface PaletteOptions {
+    hamburgerButton?: HamburgerButtonPalette;
+    // green?: PaletteOptions['grey'];
+  }
 
   interface TypographyVariants {
     p4: TypographyStyleOptions;

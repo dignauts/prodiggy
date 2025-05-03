@@ -1,0 +1,27 @@
+@use '../../../theme/css/responsive.scss' as responsive;
+
+.DaPrimaryHeaderModule {
+  &-hamburger {
+    display: none;
+
+    @include responsive.mq(md) {
+      display: block;
+    }
+  }
+
+  &-primaryNavigation {
+    @include responsive.mq(md) {
+      display: none;
+    }
+  }
+
+  &-root {
+    & .DaBaseHeaderComponent {
+      &-container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

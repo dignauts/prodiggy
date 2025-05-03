@@ -8,6 +8,9 @@ export const darkPalette: ThemeOptions['palette'] = {
     black: '#0B0C10',
     white: '#FFFFFF'
   },
+  hamburgerButton: {
+    ingredient: '#FFFFFF'
+  },
   grey: {
     50: '#F1F2F5',
     100: '#C7CAD7',
