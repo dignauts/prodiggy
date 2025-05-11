@@ -4,3 +4,7 @@ export interface BaseComponentProps {
   className?: string;
   sx?: Style;
 }
+
+export interface BaseButtonWithTooltipProps {
+  enableTooltip?: boolean;
+}
