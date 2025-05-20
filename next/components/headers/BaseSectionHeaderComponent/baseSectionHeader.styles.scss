@@ -1,0 +1,15 @@
+.DaBaseSectionHeaderComponent {
+  &-chip {
+    margin-bottom: calc(5*var(--mui-spacing));
+  }
+
+  &-description {
+    margin-top: calc(5*var(--mui-spacing));
+  }
+
+  &-root {
+    max-width: 954px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

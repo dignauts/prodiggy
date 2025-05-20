@@ -6,6 +6,15 @@ import { responsiveFontSize } from '#da/theme/utils/responsiveFontSize.util';
 
 export const typography: ThemeOptions['typography'] = {
   fontFamily: 'var(--prodiggy-font-inter)',
+  h1: {
+    fontFamily: 'var(--prodiggy-font-plus-jakarta-sans)',
+    fontSize: responsiveFontSize(48),
+    letterSpacing: letterSpacing({ percent: -2 }),
+    lineHeight: '130%'
+    // [mediaQuery({ breakpoint: 'md' })]: {
+    //   fontSize: responsiveFontSize(20)
+    // }
+  },
   h4: {
     fontFamily: 'var(--prodiggy-font-plus-jakarta-sans)',
     fontSize: responsiveFontSize(24),
@@ -14,6 +23,16 @@ export const typography: ThemeOptions['typography'] = {
     [mediaQuery({ breakpoint: 'md' })]: {
       fontSize: responsiveFontSize(20)
     }
+  },
+  p2: {
+    fontSize: responsiveFontSize(18),
+    letterSpacing: letterSpacing({ percent: -2 }),
+    lineHeight: '135%'
+  },
+  p3: {
+    fontSize: responsiveFontSize(16),
+    letterSpacing: letterSpacing({ percent: -2 }),
+    lineHeight: '135%'
   },
   p4: {
     fontSize: responsiveFontSize(14),

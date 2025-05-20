@@ -8,6 +8,14 @@ export const components: ThemeOptions['components'] = {
       variant: 'contained'
     }
   },
+  MuiChip: {
+    styleOverrides: {
+      colorDefault: {
+        backgroundColor: 'var(--mui-palette-grey-600)',
+        borderRadius: 4
+      }
+    }
+  },
   MuiLink: {
     styleOverrides: {
       root: {
@@ -48,6 +56,11 @@ export const components: ThemeOptions['components'] = {
         borderRadius: 4,
         color: 'var(--mui-palette-text-primary)'
       }
+    }
+  },
+  MuiTypography: {
+    defaultProps: {
+      component: 'p'
     }
   },
   LinkComponent: {

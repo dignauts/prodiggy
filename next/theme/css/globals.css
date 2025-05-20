@@ -4,7 +4,10 @@
   /* Components */
   --prodiggy-hamburger-button-width: 28px;
   --prodiggy-hamburger-button-gap: 8px;
-  --prodiggy-hamburger-button-ingredient-height: 3px;
+  --prodiggy-hamburger-button-ingredient-height: 3px; 
+
+  /* Fonts */
+  --prodiggy-font-weight-bold: 700;
 }
 
 body {

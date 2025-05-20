@@ -1,0 +1,15 @@
+.DaChipComponent {
+  &-root {
+    &.MuiChip {
+      &-sizeMedium {
+        font: var(--mui-font-p4);
+        font-weight: var(--prodiggy-font-weight-bold);
+        height: 35px;
+      }
+    }
+  }
+
+  &-withoutBorderRadius {
+    border-radius: 0;
+  }
+}

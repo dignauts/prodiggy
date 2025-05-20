@@ -6,6 +6,11 @@
     "close": "Close menu",
     "open": "Open menu"
   },
+  "hero_section_module": {
+    "chip": "#1 Best Finance Management App",
+    "description": "With our platform, you can streamline your project management process and increase efficiency. It allows you to manage all your projects in one central location, and keep track of tasks, deadlines, and progress.",
+    "title": "Eliminate the chaos of managing projects with our platform"
+  },
   "navigation": {
     "blog": "Blog",
     "contact": "Contact",
