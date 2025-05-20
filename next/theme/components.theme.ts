@@ -23,7 +23,7 @@ export const components: ThemeOptions['components'] = {
   MuiDrawer: {
     styleOverrides: {
       paper: {
-        background: 'var(--mui-palette-grey-500)'
+        background: 'var(--mui-palette-grey-700)'
       }
     }
   },  
