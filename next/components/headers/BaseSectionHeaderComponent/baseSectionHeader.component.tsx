@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Stack, Typography } from '@mui/material';
 import clsx from 'clsx';
 import { FC } from 'react';
 
@@ -9,7 +9,7 @@ import { FONT_WEIGHT } from '#da/theme/constants.theme';
 import '#da/components/headers/BaseSectionHeaderComponent/baseSectionHeader.styles.scss';
 
 const BaseSectionHeaderComponent: FC<BaseSectionHeaderComponentProps> = ({
-  chip, className, description, sx, title
+  buttons, chip, className, description, sx, title
 }) => (
   <Box className={clsx(BASE_SECTION_HEADER_CLASS_NAME.ROOT, className)} sx={sx}>
     {
@@ -39,6 +39,26 @@ const BaseSectionHeaderComponent: FC<BaseSectionHeaderComponentProps> = ({
         >
           { description }
         </Typography>
+      )
+    }
+    {
+      buttons && buttons.length > 0 && (
+        <Stack
+          className={BASE_SECTION_HEADER_CLASS_NAME.BUTTONS}
+          direction="row"
+          gap={20/8}
+          justifyContent="center"
+        >
+          {
+            buttons.map((button, index) => (
+              <Button 
+                {...button}
+                key={`BaseSectionHeaderComponent-Button-${index}`}
+                size='large'
+              />
+            ))
+          }
+        </Stack>
       )
     }
   </Box>

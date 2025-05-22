@@ -10,10 +10,13 @@ export const typography: ThemeOptions['typography'] = {
     fontFamily: 'var(--prodiggy-font-plus-jakarta-sans)',
     fontSize: responsiveFontSize(48),
     letterSpacing: letterSpacing({ percent: -2 }),
-    lineHeight: '130%'
-    // [mediaQuery({ breakpoint: 'md' })]: {
-    //   fontSize: responsiveFontSize(20)
-    // }
+    lineHeight: '130%',
+    [mediaQuery({ breakpoint: 'md' })]: {
+      fontSize: responsiveFontSize(36)
+    },
+    [mediaQuery({ breakpoint: 'sm' })]: {
+      fontSize: responsiveFontSize(32)
+    }
   },
   h4: {
     fontFamily: 'var(--prodiggy-font-plus-jakarta-sans)',
@@ -27,7 +30,10 @@ export const typography: ThemeOptions['typography'] = {
   p2: {
     fontSize: responsiveFontSize(18),
     letterSpacing: letterSpacing({ percent: -2 }),
-    lineHeight: '135%'
+    lineHeight: '135%',
+    [mediaQuery({ breakpoint: 'md' })]: {
+      fontSize: responsiveFontSize(16)
+    }
   },
   p3: {
     fontSize: responsiveFontSize(16),

@@ -5,14 +5,25 @@ import BaseSectionHeaderComponent from '#da/components/headers/BaseSectionHeader
 import BaseSectionComponent from '#da/components/sections/BaseSectionComponent';
 import { SECTION_CLASS_NAME } from '#da/components/sections/SectionComponent/section.constants';
 import { SectionComponentProps } from '#da/components/sections/SectionComponent/section.props';
+import '#da/components/sections/SectionComponent/section.styles.scss';
 
 const SectionComponent: FC<SectionComponentProps> = ({
-  chip, children, className, description, sx, title
+  buttons, chip, children, className, description, disableMarginBottom, sx, title
 }) => (
-  <BaseSectionComponent className={clsx(SECTION_CLASS_NAME.ROOT, className)} sx={sx}>
+  <BaseSectionComponent 
+    className={clsx(
+      SECTION_CLASS_NAME.ROOT, 
+      className
+    )}
+    sx={sx}
+  >
     <BaseSectionHeaderComponent 
+      buttons={buttons}
       chip={chip}
-      className={SECTION_CLASS_NAME.HEADER} 
+      className={clsx(
+        SECTION_CLASS_NAME.HEADER,
+        !disableMarginBottom && SECTION_CLASS_NAME.WITH_MARGIN_BOTTOM
+      )} 
       description={description}
       title={title}
     />

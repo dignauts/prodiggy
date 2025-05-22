@@ -1,6 +1,8 @@
 {
   "button": {
-    "return_to_home": "Return to Home"
+    "get_started_for_free": "Get Started for Free",
+    "return_to_home": "Return to Home",
+    "view_demo": "View demo"
   },
   "hamburger": {
     "close": "Close menu",

@@ -1,0 +1,7 @@
+.DaSectionComponent {
+  &-header {
+    &--withMarginBottom {
+      margin-bottom: calc(7.5*var(--mui-spacing));
+    }
+  }
+}

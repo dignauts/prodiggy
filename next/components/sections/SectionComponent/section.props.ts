@@ -4,6 +4,7 @@ import { BaseComponentWithChildrenProps } from '#da/types/props/common.props';
 
 export interface SectionComponentProps 
   extends BaseComponentWithChildrenProps, 
-  Pick<BaseSectionHeaderComponentProps, 'chip' | 'description' | 'title'>,
+  Pick<BaseSectionHeaderComponentProps, 'buttons' | 'chip' | 'description' | 'title'>,
   Pick<BaseSectionComponentProps, 'containerWidth'> {
+  disableMarginBottom?: boolean;
 }

@@ -1,10 +1,18 @@
+@use '../../../theme/css/responsive.scss' as responsive;
+
 .DaBaseSectionHeaderComponent {
-  &-chip {
-    margin-bottom: calc(5*var(--mui-spacing));
+  &-buttons {
+    @include responsive.mq(sm) {
+      flex-direction: column;
+    }
   }
 
-  &-description {
+  &-buttons, &-description {
     margin-top: calc(5*var(--mui-spacing));
+  }
+
+  &-chip {
+    margin-bottom: calc(5*var(--mui-spacing));
   }
 
   &-root {

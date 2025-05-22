@@ -4,7 +4,7 @@ import { Stack } from '@mui/material';
 import clsx from 'clsx';
 import { FC } from 'react';
 
-import CloseButtonComponent from '#da/components/buttons/CloseButtonComponent/closeButton.component';
+import CloseButtonComponent from '#da/components/buttons/CloseButtonComponent';
 import { BASE_MODAL_HEADER_CLASS_NAME } from '#da/components/headers/BaseModalHeaderComponent/baseModalHeader.constants';
 import { BaseModalHeaderComponentProps } from '#da/components/headers/BaseModalHeaderComponent/baseModalHeader.props';
 import '#da/components/headers/BaseModalHeaderComponent/baseModalHeader.styles.scss';
