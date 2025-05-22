@@ -28,6 +28,7 @@
   "engines": {
     "node": ">=22.11.0"
   },
+  "homepage": "https://dignauts.github.io",
   "name": "prodiggy",
   "private": true,
   "scripts": {
