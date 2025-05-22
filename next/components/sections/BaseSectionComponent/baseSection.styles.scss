@@ -1,0 +1,15 @@
+@use '../../../theme/css/responsive.scss' as responsive;
+
+.DaBaseSectionComponent {
+  &-root {
+    padding: calc(12.5*var(--mui-spacing)) 0;
+
+    @include responsive.mq(lg) {
+      padding: calc(10*var(--mui-spacing)) 0;
+    }
+
+    @include responsive.mq(md) {
+      padding: calc(7.5*var(--mui-spacing)) 0;
+    }
+  }
+}

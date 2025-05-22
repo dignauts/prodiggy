@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   env: {
     VERSION: pkg.version
   },
+  images: {
+    unoptimized: true
+  },
   output: 'export'
 };
 

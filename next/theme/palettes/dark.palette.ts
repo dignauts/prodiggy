@@ -45,6 +45,7 @@ export const darkPalette: ThemeOptions['palette'] = {
     700: '#f47100',
     800: '#ee6002',
     900: '#e54304',
+    contrastText: '#ffffff',
     main: '#ff8d00'
   },
   text: {

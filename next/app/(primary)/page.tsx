@@ -1,7 +1,7 @@
+import HeroSectionModule from '#da/modules/sections/HeroSectionModule';
+
 const Home = () => (
-  <div>
-    HOME
-  </div>
+  <HeroSectionModule />
 );
 
 export default Home;

@@ -54,10 +54,14 @@ declare module '@mui/material/styles' {
   }
 
   interface TypographyVariants {
+    p2: TypographyStyleOptions;
+    p3: TypographyStyleOptions;
     p4: TypographyStyleOptions;
   }
 
   interface TypographyVariantsOptions {
+    p2?: TypographyStyleOptions;
+    p3?: TypographyStyleOptions;
     p4?: TypographyStyleOptions;
   }
 }
@@ -71,6 +75,8 @@ declare module '@mui/material/styles' {
 
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
+    p2: true;
+    p3: true;
     p4: true;
   }
 }

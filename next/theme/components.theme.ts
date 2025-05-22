@@ -1,17 +1,42 @@
 import { ThemeOptions } from '@mui/material';
 
+import { FONT_WEIGHT } from '#da/theme/constants.theme';
 import { responsiveFontSize } from '#da/theme/utils/responsiveFontSize.util';
 
 export const components: ThemeOptions['components'] = {
   MuiButton: {
     defaultProps: {
       variant: 'contained'
+    },
+    styleOverrides: {
+      containedPrimary:{ 
+        ':hover': {
+          backgroundColor: 'var(--mui-palette-secondary-main)'
+        }
+      },
+      containedSecondary: {
+        backgroundColor: 'var(--mui-palette-grey-600)',
+        ':hover': {
+          backgroundColor: 'var(--mui-palette-secondary-main)'
+        }
+      },
+      containedSizeLarge: {
+        padding: 'calc(1.75*var(--mui-spacing)) calc(5*var(--mui-spacing))'
+      },
+      root: {
+        textTransform: 'initial'
+      },
+      sizeLarge: {
+        font: 'var(--mui-font-p4)',
+        fontWeight: FONT_WEIGHT.MEDIUM
+      }
     }
   },
-  MuiLink: {
+  MuiChip: {
     styleOverrides: {
-      root: {
-        fontFamily: 'var(--prodiggy-font-inter)'
+      colorDefault: {
+        backgroundColor: 'var(--mui-palette-grey-600)',
+        borderRadius: 4
       }
     }
   },
@@ -27,6 +52,13 @@ export const components: ThemeOptions['components'] = {
       }
     }
   },  
+  MuiLink: {
+    styleOverrides: {
+      root: {
+        fontFamily: 'var(--prodiggy-font-inter)'
+      }
+    }
+  },
   MuiSvgIcon: {
     styleOverrides: {
       fontSizeLarge: {
@@ -48,6 +80,11 @@ export const components: ThemeOptions['components'] = {
         borderRadius: 4,
         color: 'var(--mui-palette-text-primary)'
       }
+    }
+  },
+  MuiTypography: {
+    defaultProps: {
+      component: 'p'
     }
   },
   LinkComponent: {

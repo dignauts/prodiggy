@@ -1,0 +1,16 @@
+.DaImageComponent {
+  &-image {
+    &--filled {
+      height: auto !important;
+      position: relative !important;
+    }
+  }
+
+  &-root {
+    position: relative;
+
+    &--centered {
+      margin: 0 auto;
+    }
+  }
+}
