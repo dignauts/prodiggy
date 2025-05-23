@@ -10,7 +10,7 @@ export const typography: ThemeOptions['typography'] = {
     fontFamily: 'var(--prodiggy-font-plus-jakarta-sans)',
     fontSize: responsiveFontSize(48),
     letterSpacing: letterSpacing({ percent: -2 }),
-    lineHeight: '130%',
+    lineHeight: '125%',
     [mediaQuery({ breakpoint: 'md' })]: {
       fontSize: responsiveFontSize(36)
     },

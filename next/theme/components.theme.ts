@@ -87,6 +87,12 @@ export const components: ThemeOptions['components'] = {
       component: 'p'
     }
   },
+  BaseSectionComponent: {
+    defaultProps: {
+      color: 'primary',
+      containerWidth: '2xl'
+    }
+  },
   LinkComponent: {
     defaultProps: {
       color: 'textSecondary'

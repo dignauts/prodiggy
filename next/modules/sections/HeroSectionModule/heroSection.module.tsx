@@ -24,6 +24,7 @@ const HeroSectionModule = () => {
         centered
         fill
         maxWidth={1168}
+        priority
         src={ASSET.DASHBOARD}
       />
     </SectionComponent>

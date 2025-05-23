@@ -6,6 +6,8 @@ import { PRODIGGY_LOGO_COMPONENT_NAME } from './components/logos/ProdiggyLogoCom
 import { ProdiggyLogoComponentProps } from './components/logos/ProdiggyLogoComponent/prodiggyLogo.props';
 import { LINK_COMPONENT_NAME } from './components/main/LinkComponent/link.constants';
 import { LinkComponentProps } from './components/main/LinkComponent/link.props';
+import { BASE_SECTION_COMPONENT_NAME } from './components/sections/BaseSectionComponent/baseSection.constants';
+import { BaseSectionComponentProps } from './components/sections/BaseSectionComponent/baseSection.props';
 import { HamburgerButtonPalette } from './types/mui.types';
 
 type Theme = Omit<MuiTheme, 'components'>;
@@ -21,6 +23,11 @@ declare module '@mui/material/styles' {
   }
   
   interface Components {
+    [BASE_SECTION_COMPONENT_NAME]?: {
+      defaultProps?: ComponentsPropsList['BaseSectionComponent'];
+      styleOverrides?: ComponentsOverrides<Theme>['BaseSectionComponent'];
+      variants?: ComponentsVariants['BaseSectionComponent'];
+    }
     [LINK_COMPONENT_NAME]?: {
       defaultProps?: ComponentsPropsList['LinkComponent'];
       styleOverrides?: ComponentsOverrides<Theme>['LinkComponent'];
@@ -34,11 +41,13 @@ declare module '@mui/material/styles' {
   }
 
   interface ComponentNameToClassKey {
+    [BASE_SECTION_COMPONENT_NAME]: 'container' | 'root';
     [LINK_COMPONENT_NAME]: 'root';
     [PRODIGGY_LOGO_COMPONENT_NAME]: 'logotype' | 'root';
   }
 
   interface ComponentsPropsList {
+    [BASE_SECTION_COMPONENT_NAME]: Partial<BaseSectionComponentProps>;
     [LINK_COMPONENT_NAME]: Partial<LinkComponentProps>;
     [PRODIGGY_LOGO_COMPONENT_NAME]: Partial<ProdiggyLogoComponentProps>;
   }
