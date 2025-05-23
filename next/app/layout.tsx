@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getLocale } from 'next-intl/server';
 import { PropsWithChildren } from 'react';
 
+import ApolloClientProviderModule from '#da/modules/providers/apolloClientProvider.module';
 import CacheProviderModule from '#da/modules/providers/cacheProvider.module';
 import '#da/theme/css/globals.css';
 
@@ -33,9 +34,11 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
     <html lang={locale}>
       <body className={clsx(inter.variable, plusJakartaSans.variable)}>
         <CacheProviderModule>
-          <NextIntlClientProvider>
-            { children }
-          </NextIntlClientProvider>
+          <ApolloClientProviderModule>
+            <NextIntlClientProvider>
+              { children }
+            </NextIntlClientProvider>
+          </ApolloClientProviderModule>
         </CacheProviderModule>
       </body>
     </html>

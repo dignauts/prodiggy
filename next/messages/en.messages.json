@@ -19,5 +19,9 @@
     "faq": "FAQ",
     "features": "Features",
     "home": "Home"
+  },
+  "why_us_section_module": {
+    "description": "Manage all your transactions in one central location. View all your transactions from multiple accounts, filter, categorize and track them in real-time.",
+    "title": "One dashboard to manage all your transactions"
   }
 }
