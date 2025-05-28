@@ -1,5 +1,6 @@
 'use client';
 
+import Masonry from '@mui/lab/Masonry';
 import { useTranslations } from 'next-intl';
 
 import FeatureCardComponent from '#da/components/cards/FeatureCardComponent';
@@ -20,7 +21,26 @@ const WhyUsSectionModule = () => {
         description={t('why_us_section_module.description')} 
         title={t('why_us_section_module.title')}
       />
-      <FeatureCardComponent {...whyUsCardsFakes[0]} />
+      {
+        whyUsCardsFakes.length > 0 && (
+          <Masonry
+            className={WHY_US_SECTION_CLASS_NAME.MASONRY} 
+            columns={{ sm: 1, md: 2 }}
+            defaultColumns={2}
+            defaultSpacing={5}
+            spacing={5}
+          >
+            {
+              whyUsCardsFakes.map((card, index) => (
+                <FeatureCardComponent 
+                  {...card} 
+                  key={`WhyUsSectionModule-FeatureCardComponent-${card.title}-${index}`} 
+                />
+              ))
+            }
+          </Masonry>
+        )
+      }
     </BaseSectionComponent>
   );
 };

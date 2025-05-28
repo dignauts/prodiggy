@@ -22,4 +22,16 @@
       margin-bottom: 80px;
     }
   }
+
+  &-masonry {
+    margin: 0;
+
+    & .DaFeatureCardComponent {
+      &-root:nth-of-type(2) {
+        @include responsive.mq(sm, min) {
+          margin-top: calc(7.5*var(--mui-spacing));
+        }
+      }
+    }
+  }
 }

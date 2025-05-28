@@ -1,0 +1,33 @@
+@use '../../../theme/css/responsive.scss' as responsive;
+
+.DaFeatureCardHeaderComponent {
+  &-description {
+    color: var(--mui-palette-grey-300);
+    grid-column: 2 / 3;
+  }
+
+  &-root {
+    column-gap: calc(4*var(--mui-spacing));
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    padding: calc(5*var(--mui-spacing)) calc(4*var(--mui-spacing));
+
+    @include responsive.mq(lg) {
+      padding-inline: calc(3*var(--mui-spacing));
+    }
+
+    @include responsive.mq(md) {
+      display: flex;
+      flex-direction: column;
+      gap: calc(2.5*var(--mui-spacing))
+    }
+
+    @include responsive.mq(sm) {
+      padding-inline: calc(2*var(--mui-spacing));
+    }
+  }
+
+  &-title {
+    margin-bottom: calc(1.5*var(--mui-spacing));
+  }
+}

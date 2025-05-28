@@ -1,29 +1,40 @@
-import { Paper, Typography } from '@mui/material';
+import { Paper } from '@mui/material';
+import clsx from 'clsx';
 import { FC } from 'react';
 
+import { FEATURE_CARD_CLASS_NAME } from '#da/components/cards/FeatureCardComponent/featureCard.constants';
 import { FeatureCardComponentProps } from '#da/components/cards/FeatureCardComponent/featureCard.props';
+import FeatureCardHeaderComponent from '#da/components/headers/FeatureCardHeaderComponent/featureCardHeader.component';
 import ImageComponent from '#da/components/main/ImageComponent';
-import { FONT_WEIGHT } from '#da/theme/constants.theme';
+import '#da/components/cards/FeatureCardComponent/featureCard.styles.scss';
 
 const FeatureCardComponent: FC<FeatureCardComponentProps> = ({
   className, description, icon, image, sx, title
 }) => (
   <Paper
-    sx={{
-      maxWidth: 650
-    }}
+    className={clsx(
+      FEATURE_CARD_CLASS_NAME.ROOT,
+      image && FEATURE_CARD_CLASS_NAME.WITH_IMAGE,
+      className
+    )}
+    sx={sx}
   >
-    <ImageComponent
-      alt=''
-      height={40}
-      src={icon}
-      width={40} 
+    <FeatureCardHeaderComponent
+      className={FEATURE_CARD_CLASS_NAME.HEADER}
+      description={description}
+      icon={icon}
+      title={title} 
     />
-    <Typography
-      fontWeight={FONT_WEIGHT.SEMIBOLD} sx={{ mb: 12 / 8 }}
-      variant='h4'>{ title }
-    </Typography>
-    <Typography sx={{ color: 'var(--mui-palette-grey-300)' }} variant='p2'>dsds</Typography>
+    {
+      image && (
+        <ImageComponent
+          className={FEATURE_CARD_CLASS_NAME.IMAGE}
+          fill
+          maxWidth="100%"
+          src={image}
+        />
+      )
+    }
   </Paper>
 );
 
