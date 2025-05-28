@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 
 import ImageComponent from '#da/components/main/ImageComponent';
@@ -20,13 +21,22 @@ const HeroSectionModule = () => {
       description={t('hero_section_module.description')}
       title={t('hero_section_module.title')}
     >
-      <ImageComponent
-        centered
-        fill
-        maxWidth={1168}
-        priority
-        src={ASSET.DASHBOARD}
-      />
+      <motion.div
+        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, scale: 0.1 }}
+        transition={{
+          duration: 0.45,
+          scale: { type: 'spring', visualDuration: 0.45, bounce: 0.3 }
+        }}
+      >
+        <ImageComponent
+          centered
+          fill
+          maxWidth={1168}
+          priority
+          src={ASSET.DASHBOARD}
+        />
+      </motion.div>
     </SectionComponent>
   );
 };

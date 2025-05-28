@@ -2,13 +2,13 @@
 
 import { Container, useThemeProps } from '@mui/material';
 import clsx from 'clsx';
-import { FC } from 'react';
+import { forwardRef } from 'react';
 
 import { BaseSectionRootAtom } from '#da/components/sections/BaseSectionComponent/baseSection.atoms';
 import { BASE_SECTION_CLASS_NAME, BASE_SECTION_COMPONENT_NAME } from '#da/components/sections/BaseSectionComponent/baseSection.constants';
 import { BaseSectionComponentProps } from '#da/components/sections/BaseSectionComponent/baseSection.props';
 
-const BaseSectionComponent: FC<BaseSectionComponentProps> = (props) => {
+const BaseSectionComponent = forwardRef<HTMLElement, BaseSectionComponentProps>((props, ref) => {
   const { children, className, color, containerWidth, sx } = useThemeProps({ 
     props, name: BASE_SECTION_COMPONENT_NAME 
   });
@@ -17,6 +17,7 @@ const BaseSectionComponent: FC<BaseSectionComponentProps> = (props) => {
     <BaseSectionRootAtom 
       className={clsx(BASE_SECTION_CLASS_NAME.ROOT, className)} 
       color={color}
+      ref={ref}
       sx={sx}
     >
       <Container className={BASE_SECTION_CLASS_NAME.CONTAINER} maxWidth={containerWidth}>
@@ -24,6 +25,8 @@ const BaseSectionComponent: FC<BaseSectionComponentProps> = (props) => {
       </Container>
     </BaseSectionRootAtom>
   );
-};
+});
+
+BaseSectionComponent.displayName = BASE_SECTION_COMPONENT_NAME;
 
 export default BaseSectionComponent;

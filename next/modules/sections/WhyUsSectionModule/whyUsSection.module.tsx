@@ -1,7 +1,10 @@
 'use client';
 
 import Masonry from '@mui/lab/Masonry';
+import { motion } from 'motion/react';
+import { useInView } from 'motion/react';
 import { useTranslations } from 'next-intl';
+import { useRef } from 'react';
 
 import FeatureCardComponent from '#da/components/cards/FeatureCardComponent';
 import BaseSectionHeaderComponent from '#da/components/headers/BaseSectionHeaderComponent';
@@ -13,9 +16,16 @@ import '#da/modules/sections/WhyUsSectionModule/whyUsSection.styles.scss';
 
 const WhyUsSectionModule = () => {
   const t = useTranslations();
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(sectionRef, {
+    margin: '0px 100px -50px 0px'
+  });
 
   return (
-    <BaseSectionComponent className={WHY_US_SECTION_CLASS_NAME.ROOT} color='secondary'>
+    <BaseSectionComponent
+      className={WHY_US_SECTION_CLASS_NAME.ROOT}
+      color='secondary'
+    >
       <BaseSectionHeaderComponent
         className={WHY_US_SECTION_CLASS_NAME.HEADER}
         description={t('why_us_section_module.description')} 
@@ -24,18 +34,28 @@ const WhyUsSectionModule = () => {
       {
         whyUsCardsFakes.length > 0 && (
           <Masonry
-            className={WHY_US_SECTION_CLASS_NAME.MASONRY} 
-            columns={{ sm: 1, md: 2 }}
+            className={WHY_US_SECTION_CLASS_NAME.MASONRY}
+            columns={{ sm: 1, md: 2 }} 
             defaultColumns={2}
             defaultSpacing={5}
+            ref={sectionRef}
             spacing={5}
           >
             {
               whyUsCardsFakes.map((card, index) => (
-                <FeatureCardComponent 
-                  {...card} 
-                  key={`WhyUsSectionModule-FeatureCardComponent-${card.title}-${index}`} 
-                />
+                <motion.div
+                  animate={isInView ? { opacity: 1, scale: 1 } : undefined} 
+                  initial={{ opacity: 0, scale: 0.1 }}
+                  key={`WhyUsSectionModule-FeatureCardComponent-${card.title}-${index}`}
+                  transition={{
+                    duration: 0.45,
+                    scale: { type: 'spring', visualDuration: 0.45, bounce: 0.3 }
+                  }}
+                >
+                  <FeatureCardComponent 
+                    {...card} 
+                  />
+                </motion.div>
               ))
             }
           </Masonry>
