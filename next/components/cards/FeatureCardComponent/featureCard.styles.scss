@@ -1,0 +1,38 @@
+@use '../../../theme/css/responsive.scss' as responsive;
+
+.DaFeatureCardComponent {
+  &-image {
+    padding-inline: calc(10.5*var(--mui-spacing));
+    
+    & .DaImageComponent-image {
+      display: block;
+
+      @include responsive.mq(lg, min) {
+        border-top-left-radius: calc(0.5*var(--mui-spacing));
+        border-top-right-radius: calc(0.5*var(--mui-spacing));
+      }
+    }
+
+    @include responsive.mq(xl) {
+      padding-inline: calc(8*var(--mui-spacing));
+    }
+
+    @include responsive.mq(lg) {
+      padding-inline: 0;
+    }
+  }
+
+  &-root {
+    max-width: 650px;
+  }
+
+  &--withImage {
+    & .DaFeatureCardHeaderComponent-root {
+      margin-bottom: calc(2.5*var(--mui-spacing));
+
+      @include responsive.mq(lg) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

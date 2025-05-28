@@ -59,6 +59,20 @@ export const components: ThemeOptions['components'] = {
       }
     }
   },
+  MuiPaper: {
+    defaultProps: {
+      variant: 'outlined'
+    },
+    styleOverrides: {
+      outlined: {
+        backgroundColor: 'var(--mui-palette-grey-500)',
+        borderColor: 'var(--mui-palette-grey-400)'
+      },
+      rounded: {
+        borderRadius: 4
+      }
+    }
+  },
   MuiSvgIcon: {
     styleOverrides: {
       fontSizeLarge: {
@@ -85,6 +99,12 @@ export const components: ThemeOptions['components'] = {
   MuiTypography: {
     defaultProps: {
       component: 'p'
+    }
+  },
+  BaseSectionComponent: {
+    defaultProps: {
+      color: 'primary',
+      containerWidth: '2xl'
     }
   },
   LinkComponent: {

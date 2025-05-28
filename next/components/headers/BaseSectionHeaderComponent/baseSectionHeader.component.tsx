@@ -1,5 +1,6 @@
 import { Box, Button, Stack, Typography } from '@mui/material';
 import clsx from 'clsx';
+import { motion } from 'motion/react';
 import { FC } from 'react';
 
 import { BASE_SECTION_HEADER_CLASS_NAME } from '#da/components/headers/BaseSectionHeaderComponent/baseSectionHeader.constants';
@@ -14,51 +15,90 @@ const BaseSectionHeaderComponent: FC<BaseSectionHeaderComponentProps> = ({
   <Box className={clsx(BASE_SECTION_HEADER_CLASS_NAME.ROOT, className)} sx={sx}>
     {
       chip?.label && (
-        <ChipComponent
-          className={BASE_SECTION_HEADER_CLASS_NAME.CHIP}
-          color={chip?.color || 'default'}
-          label={chip.label}
-          size={chip?.size || 'medium'}
-        />
+        <motion.div
+          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 }
+          }}
+        >
+          <ChipComponent
+            className={BASE_SECTION_HEADER_CLASS_NAME.CHIP}
+            color={chip?.color || 'default'}
+            label={chip.label}
+            size={chip?.size || 'medium'}
+          />
+        </motion.div>
       )
     }
-    <Typography
-      className={BASE_SECTION_HEADER_CLASS_NAME.TITLE}
-      component="h2" 
-      fontWeight={FONT_WEIGHT.REGULAR}
-      variant='h1'
+    <motion.div
+      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, scale: 0 }}
+      transition={{
+        duration: 0.55,
+        delay: 0.2,
+        scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 }
+      }}
     >
-      { title }
-    </Typography>
+      <Typography
+        className={BASE_SECTION_HEADER_CLASS_NAME.TITLE}
+        component="h2" 
+        fontWeight={FONT_WEIGHT.REGULAR}
+        variant='h1'
+      >
+        { title }
+      </Typography>
+    </motion.div>
     {
       description && (
-        <Typography
-          className={BASE_SECTION_HEADER_CLASS_NAME.DESCRIPTION}
-          color='textSecondary'
-          variant='p2'
+        <motion.div
+          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0 }}
+          transition={{
+            duration: 0.7,
+            delay: 0.4,
+            scale: { type: 'spring', visualDuration: 0.45, bounce: 0.5 }
+          }}
         >
-          { description }
-        </Typography>
+          <Typography
+            className={BASE_SECTION_HEADER_CLASS_NAME.DESCRIPTION}
+            color='textSecondary'
+            variant='p2'
+          >
+            { description }
+          </Typography>
+        </motion.div>
       )
     }
     {
       buttons && buttons.length > 0 && (
-        <Stack
-          className={BASE_SECTION_HEADER_CLASS_NAME.BUTTONS}
-          direction="row"
-          gap={20/8}
-          justifyContent="center"
+        <motion.div
+          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0 }}
+          transition={{
+            duration: 0.9,
+            delay: 0.6,
+            scale: { type: 'spring', visualDuration: 0.5, bounce: 0.5 }
+          }}
         >
-          {
-            buttons.map((button, index) => (
-              <Button 
-                {...button}
-                key={`BaseSectionHeaderComponent-Button-${index}`}
-                size='large'
-              />
-            ))
-          }
-        </Stack>
+          <Stack
+            className={BASE_SECTION_HEADER_CLASS_NAME.BUTTONS}
+            direction="row"
+            gap={20/8}
+            justifyContent="center"
+          >
+            {
+              buttons.map((button, index) => (
+                <Button 
+                  {...button}
+                  key={`BaseSectionHeaderComponent-Button-${index}`}
+                  size='large'
+                />
+              ))
+            }
+          </Stack>
+        </motion.div>
       )
     }
   </Box>

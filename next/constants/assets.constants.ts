@@ -1,3 +1,3 @@
 export enum ASSET {
-  DASHBOARD = 'images/dashboard.webp',
+  DASHBOARD = 'images/app/dashboard.webp'
 }

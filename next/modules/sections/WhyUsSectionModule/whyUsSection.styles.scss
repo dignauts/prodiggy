@@ -1,0 +1,37 @@
+@use '../../../theme/css/responsive.scss' as responsive;
+
+.DaWhyUsSectionModule {
+  &-header {
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 100px;
+    max-width: none;
+    text-align: initial;
+    
+    & .DaBaseSectionHeaderComponent {
+      &-description {
+        margin-top: 0;
+      }
+    }
+
+    @include responsive.mq(lg) {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+  }
+
+  &-masonry {
+    margin: 0;
+
+    & .DaFeatureCardComponent {
+      &-root:nth-of-type(2) {
+        @include responsive.mq(sm, min) {
+          margin-top: calc(7.5*var(--mui-spacing));
+        }
+      }
+    }
+  }
+}
