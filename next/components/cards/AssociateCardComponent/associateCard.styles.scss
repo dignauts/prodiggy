@@ -1,0 +1,21 @@
+// @use '../../../theme/css/responsive.scss' as responsive;
+
+.DaAssociateCardComponent {
+  &-logo img {
+    display: block;
+  }
+
+  &-root {
+    background: var(--mui-palette-background-default);
+    border-radius: calc(0.5*var(--mui-spacing));
+    box-sizing: content-box;
+    display: block;
+    max-width: fit-content;
+    padding: calc(3*var(--mui-spacing));
+    transition: background .25s ease-out;
+
+    // &:hover {
+    //   background: var(--mui-palette-primary-main);
+    // }
+  }
+}

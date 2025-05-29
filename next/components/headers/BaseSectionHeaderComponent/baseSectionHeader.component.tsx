@@ -1,8 +1,9 @@
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import clsx from 'clsx';
 import { motion } from 'motion/react';
 import { FC } from 'react';
 
+import ButtonComponent from '#da/components/buttons/ButtonComponent';
 import { BASE_SECTION_HEADER_CLASS_NAME } from '#da/components/headers/BaseSectionHeaderComponent/baseSectionHeader.constants';
 import { BaseSectionHeaderComponentProps } from '#da/components/headers/BaseSectionHeaderComponent/baseSectionHeader.props';
 import ChipComponent from '#da/components/main/ChipComponent';
@@ -10,7 +11,7 @@ import { FONT_WEIGHT } from '#da/theme/constants.theme';
 import '#da/components/headers/BaseSectionHeaderComponent/baseSectionHeader.styles.scss';
 
 const BaseSectionHeaderComponent: FC<BaseSectionHeaderComponentProps> = ({
-  buttons, chip, className, description, sx, title
+  buttons, chip, className, description, descriptionVariant = 'p2', sx, title
 }) => (
   <Box className={clsx(BASE_SECTION_HEADER_CLASS_NAME.ROOT, className)} sx={sx}>
     {
@@ -64,7 +65,9 @@ const BaseSectionHeaderComponent: FC<BaseSectionHeaderComponentProps> = ({
           <Typography
             className={BASE_SECTION_HEADER_CLASS_NAME.DESCRIPTION}
             color='textSecondary'
-            variant='p2'
+            component="h3"
+            fontWeight={FONT_WEIGHT.REGULAR}
+            variant={descriptionVariant}
           >
             { description }
           </Typography>
@@ -90,7 +93,7 @@ const BaseSectionHeaderComponent: FC<BaseSectionHeaderComponentProps> = ({
           >
             {
               buttons.map((button, index) => (
-                <Button 
+                <ButtonComponent 
                   {...button}
                   key={`BaseSectionHeaderComponent-Button-${index}`}
                   size='large'

@@ -1,4 +1,8 @@
 .DaHamburgerModule {
+  &-drawer .MuiDrawer-paper {
+    border: none;
+  }
+
   &-navigation .DaListComponent {
     &-link {
       &--active, &:hover {

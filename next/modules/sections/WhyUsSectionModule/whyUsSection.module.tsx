@@ -1,12 +1,11 @@
 'use client';
 
 import Masonry from '@mui/lab/Masonry';
-import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import { useRef } from 'react';
 
-import FeatureCardComponent from '#da/components/cards/FeatureCardComponent';
+import { AnimatedFeatureCardComponent } from '#da/components/cards/FeatureCardComponent';
 import BaseSectionHeaderComponent from '#da/components/headers/BaseSectionHeaderComponent';
 import BaseSectionComponent from '#da/components/sections/BaseSectionComponent';
 import { whyUsCardsFakes } from '#da/fakes/whyUsCards.fakes';
@@ -43,19 +42,10 @@ const WhyUsSectionModule = () => {
           >
             {
               whyUsCardsFakes.map((card, index) => (
-                <motion.div
-                  animate={isInView ? { opacity: 1, scale: 1 } : undefined} 
-                  initial={{ opacity: 0, scale: 0.1 }}
+                <AnimatedFeatureCardComponent
+                  isInView={isInView}
                   key={`WhyUsSectionModule-FeatureCardComponent-${card.title}-${index}`}
-                  transition={{
-                    duration: 0.45,
-                    scale: { type: 'spring', visualDuration: 0.45, bounce: 0.3 }
-                  }}
-                >
-                  <FeatureCardComponent 
-                    {...card} 
-                  />
-                </motion.div>
+                  {...card} />
               ))
             }
           </Masonry>

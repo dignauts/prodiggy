@@ -15,7 +15,8 @@
     "next-intl": "^4.1.0",
     "normalize.css": "^8.0.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-fast-marquee": "^1.6.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -42,5 +43,5 @@
     "lint": "next lint",
     "preview": "npx serve@latest out"
   },
-  "version": "0.0.0"
+  "version": "0.0.4"
 }

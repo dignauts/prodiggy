@@ -8,7 +8,7 @@ import { SectionComponentProps } from '#da/components/sections/SectionComponent/
 import '#da/components/sections/SectionComponent/section.styles.scss';
 
 const SectionComponent: FC<SectionComponentProps> = ({
-  buttons, chip, children, className, description, disableMarginBottom, sx, title
+  buttons, chip, children, className, description, descriptionVariant, disableMarginBottom, sx, title
 }) => (
   <BaseSectionComponent 
     className={clsx(
@@ -23,8 +23,9 @@ const SectionComponent: FC<SectionComponentProps> = ({
       className={clsx(
         SECTION_CLASS_NAME.HEADER,
         !disableMarginBottom && SECTION_CLASS_NAME.WITH_MARGIN_BOTTOM
-      )} 
-      description={description}
+      )}
+      description={description} 
+      descriptionVariant={descriptionVariant}
       title={title}
     />
     { children }
