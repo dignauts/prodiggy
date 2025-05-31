@@ -2,6 +2,7 @@
 
 import { Button } from '@mui/material';
 import clsx from 'clsx';
+import { motion } from 'motion/react';
 import Link from 'next/link';
 import { FC } from 'react';
 
@@ -11,15 +12,26 @@ import { ButtonComponentProps } from '#da/components/buttons/ButtonComponent/but
 const ButtonComponent: FC<ButtonComponentProps> = ({
   className, isExternal, isLink, to, ...props 
 }) => (
-  <Button 
-    className={clsx(BUTTON_CLASS_NAME.ROOT, className)} 
-    {...isLink && { 
-      component: Link, 
-      href: to,
-      target: isExternal ? '_blank' : undefined
+  <motion.div
+    whileHover={{ 
+      scale: 0.95, 
+      transition: {
+        stiffness: 500,
+        type: 'spring'
+      } 
     }}
-    {...props}
-  />
+  >
+    <Button 
+      className={clsx(BUTTON_CLASS_NAME.ROOT, className)} 
+      {...isLink && { 
+        component: Link, 
+        href: to,
+        target: isExternal ? '_blank' : undefined
+      }}
+      {...props}
+    />
+  </motion.div>
+
 );
 
 export default ButtonComponent;
