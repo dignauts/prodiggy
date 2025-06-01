@@ -1,7 +1,7 @@
 'use client';
 
 import { Drawer } from '@mui/material';
-import clsx from 'clsx';
+import { motion } from 'motion/react';
 import { FC, useCallback, useState } from 'react';
 
 import HamburgerButtonComponent from '#da/components/buttons/HamburgerButtonComponent';
@@ -21,13 +21,24 @@ const HamburgerModule: FC<BaseComponentProps> = ({ className, sx }) => {
 
   return (
     <>
-      <HamburgerButtonComponent 
-        className={clsx(HAMBURGER_CLASS_NAME.BUTTON, className)} 
-        enableTooltip 
-        isEnabled={isEnabled}
-        onEnable={onEnable}
-        sx={sx}
-      />
+      <motion.div
+        animate={{ opacity: 1, scale: 1 }}
+        className={className}
+        initial={{ opacity: 0, scale: 0 }}
+        transition={{
+          delay: 0.2,
+          duration: 0.6,
+          scale: { type: 'spring', visualDuration: 0.55, bounce: 0.5 }
+        }}
+      >
+        <HamburgerButtonComponent 
+          className={HAMBURGER_CLASS_NAME.BUTTON} 
+          enableTooltip 
+          isEnabled={isEnabled}
+          onEnable={onEnable}
+          sx={sx}
+        />
+      </motion.div>
       <Drawer
         anchor='top'
         className={HAMBURGER_CLASS_NAME.DRAWER} 

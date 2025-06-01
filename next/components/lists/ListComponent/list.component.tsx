@@ -2,6 +2,7 @@
 
 import { List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import clsx from 'clsx';
+import { motion } from 'motion/react';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { FC } from 'react';
@@ -25,20 +26,31 @@ const ListComponent: FC<ListComponentProps> = ({ className, items, showActiveLis
               className={LIST_CLASS_NAME.LIST_ITEM} 
               key={`ListComponent-ListItem-${label}-${item?.to ? 'link' : 'button'}-${index}`}
             >
-              <ListItemButton
-                className={clsx(
-                  item?.to ? LIST_CLASS_NAME.LINK : LIST_CLASS_NAME.BUTTON,
-                  showActiveListItem && item?.to === pathname && LIST_CLASS_NAME.ACTIVE_LINK
-                )}
-                component={item?.to ? LinkComponent : 'button'}
-                onClick={item?.onClick} 
-                {...item?.to && ({
-                  isExternal: item.isExternal,
-                  to: item.to
-                })}
+              <motion.div
+                style={{ width: '100%' }}
+                whileHover={{ 
+                  scale: 0.95, 
+                  transition: {
+                    stiffness: 500,
+                    type: 'spring'
+                  } 
+                }}
               >
-                <ListItemText className={LIST_CLASS_NAME.TEXT} primary={label} />
-              </ListItemButton>
+                <ListItemButton
+                  className={clsx(
+                    item?.to ? LIST_CLASS_NAME.LINK : LIST_CLASS_NAME.BUTTON,
+                    showActiveListItem && item?.to === pathname && LIST_CLASS_NAME.ACTIVE_LINK
+                  )}
+                  component={item?.to ? LinkComponent : 'button'}
+                  onClick={item?.onClick}
+                  {...item?.to && ({
+                    isExternal: item.isExternal,
+                    to: item.to
+                  })}
+                >
+                  <ListItemText className={LIST_CLASS_NAME.TEXT} primary={label} />
+                </ListItemButton>
+              </motion.div>
             </ListItem>
           );
         })

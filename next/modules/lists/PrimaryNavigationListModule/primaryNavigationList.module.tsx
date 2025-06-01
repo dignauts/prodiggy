@@ -1,6 +1,6 @@
 'use client';
-
 import clsx from 'clsx';
+import { motion } from 'motion/react';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { FC } from 'react';
@@ -19,22 +19,31 @@ const PrimaryNavigationListModule: FC<Pick<BaseComponentProps, 'className'>> = (
   const pathname = usePathname();
 
   return (
-    <NavigationListComponent<TranslatedLink> 
-      className={clsx(PRIMARY_NAVIGATION_LIST_CLASS_NAME.ROOT, className)} 
-      items={PRIMARY_NAVIGATION}
-      render={({ isExternal, i18n, to }) => (
-        <LinkComponent
-          color='navigation'
-          fontWeight={FONT_WEIGHT.MEDIUM}
-          isActive={pathname === to}
-          isExternal={isExternal}
-          to={to}
-          variant='p4'
-        >
-          { t(i18n) }
-        </LinkComponent>
-      )} 
-    />
+    <motion.div
+      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, scale: 0 }}
+      transition={{
+        duration: 0.4,
+        scale: { type: 'spring', visualDuration: 0.4, bounce: 0.45 }
+      }}
+    >
+      <NavigationListComponent<TranslatedLink> 
+        className={clsx(PRIMARY_NAVIGATION_LIST_CLASS_NAME.ROOT, className)} 
+        items={PRIMARY_NAVIGATION}
+        render={({ isExternal, i18n, to }) => (
+          <LinkComponent
+            color='navigation'
+            fontWeight={FONT_WEIGHT.MEDIUM}
+            isActive={pathname === to}
+            isExternal={isExternal}
+            to={to}
+            variant='p4'
+          >
+            { t(i18n) }
+          </LinkComponent>
+        )} 
+      />
+    </motion.div>
   );
 };
 

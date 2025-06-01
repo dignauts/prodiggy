@@ -12,7 +12,7 @@ const GetStartedSectionModule = () => {
 
   return (
     <BaseSectionComponent color='tertiary'>
-      <GetStartedComponent ref={getStartedRef} />
+      <GetStartedComponent isInView={isInView} ref={getStartedRef} />
     </BaseSectionComponent>
   );
 };

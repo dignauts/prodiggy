@@ -1,9 +1,7 @@
 import { LinkAPI } from '#da/types/api/common.api';
-import { BaseComponentProps } from '#da/types/props/common.props';
+import { AnimatedComponentProps, BaseComponentProps } from '#da/types/props/common.props';
 
-export interface AnimatedAssociateCardComponentProps extends AssociateCardComponentProps {
-  isInView: boolean;
-}
+export type AnimatedAssociateCardComponentProps = AnimatedComponentProps & AssociateCardComponentProps;
 
 export type AssociateCardProps = Omit<LinkAPI, 'isExternal'> & {
   logo: string;

@@ -25,6 +25,7 @@
 
     @include responsive.mq(sm) {
       gap: calc(4*var(--mui-spacing));
+      padding: calc(3*var(--mui-spacing));
     }
   }
 }

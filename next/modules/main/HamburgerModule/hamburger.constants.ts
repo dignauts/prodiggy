@@ -4,6 +4,7 @@ export const HAMBURGER_MODULE_NAME = 'HamburgerModule';
 
 export const HAMBURGER_CLASS_NAME = {
   BUTTON: defineClassName(HAMBURGER_MODULE_NAME, 'button'),
+  BUTTON_WRAPPER: defineClassName(HAMBURGER_MODULE_NAME, 'buttonWrapper'),
   DRAWER: defineClassName(HAMBURGER_MODULE_NAME, 'drawer'),
   HEADER: defineClassName(HAMBURGER_MODULE_NAME, 'header'),
   NAVIGATION: defineClassName(HAMBURGER_MODULE_NAME, 'navigation')
