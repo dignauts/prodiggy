@@ -18,7 +18,7 @@ const BaseHeaderComponent = forwardRef<HTMLDivElement, BaseHeaderComponentProps>
     sx={sx}
   >
     <Container className={BASE_HEADER_CLASS_NAME.CONTAINER}>
-      <LinkedProdiggyLogoModule />
+      <LinkedProdiggyLogoModule showAppVersion />
       { children }
     </Container>
   </Box>

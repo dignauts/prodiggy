@@ -4,6 +4,9 @@
     "return_to_home": "Return to Home",
     "view_demo": "View demo"
   },
+  "common": {
+    "app_version": "v{version}"
+  },
   "hamburger": {
     "close": "Close menu",
     "open": "Open menu"

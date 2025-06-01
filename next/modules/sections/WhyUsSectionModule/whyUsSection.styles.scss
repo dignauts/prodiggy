@@ -46,5 +46,9 @@
         }
       }
     }
+
+    @include responsive.mq(md) {
+      height: auto;
+    }
   }
 }
