@@ -8,6 +8,14 @@ $prodiggy-breakpoints: (
   2xl: 1400px
 );
 
+@function breakpoint($name) {
+  @if not map.has-key($prodiggy-breakpoints, $name) {
+    @error "Breakpoint `#{$name}` does not exist in \$prodiggy-breakpoints. Available keys are: #{map.keys($prodiggy-breakpoints)}.";
+  }
+  
+  @return map.get($prodiggy-breakpoints, $name);
+}
+
 @mixin mq($breakpoint, $type: max) {
   $value: map.get($prodiggy-breakpoints, $breakpoint);
 

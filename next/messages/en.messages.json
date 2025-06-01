@@ -7,6 +7,10 @@
   "common": {
     "app_version": "v{version}"
   },
+  "get_started_section_module": {
+    "description": "Take the first step to growing your business",
+    "title": "Ready to get started?"
+  },
   "hamburger": {
     "close": "Close menu",
     "open": "Open menu"

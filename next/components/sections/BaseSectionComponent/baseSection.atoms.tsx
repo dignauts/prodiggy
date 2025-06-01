@@ -18,6 +18,9 @@ export const BaseSectionRootAtom = styled('section', {
   ...(color === 'secondary' && {
     backgroundColor: 'var(--mui-palette-grey-600)'
   }),
+  ...(color === 'tertiary' && {
+    backgroundColor: 'var(--mui-palette-grey-700)'
+  }),
   [mediaQuery({ breakpoint: 'lg' })]: {
     paddingBlock: 80
   },

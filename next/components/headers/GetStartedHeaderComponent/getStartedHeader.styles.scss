@@ -1,0 +1,17 @@
+@use '../../../theme/css/responsive.scss' as responsive;
+
+.DaGetStartedHeaderComponent {  
+  &-root {
+    @include responsive.mq(md) {
+      gap: calc(5*var(--mui-spacing));
+    }
+
+    @include responsive.mq(sm) {
+      gap: calc(3*var(--mui-spacing));
+    }
+  }
+
+  &-title {
+    margin-bottom: var(--mui-spacing);
+  }
+}
