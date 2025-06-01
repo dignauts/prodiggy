@@ -3,7 +3,7 @@ import { ContainerProps } from '@mui/material';
 import { BaseComponentWithChildrenProps } from '#da/types/props/common.props';
 
 export interface BaseSectionRootAtomProps {
-  color?: 'primary' | 'secondary';
+  color?: 'primary' | 'secondary' | 'tertiary';
 }
 
 export interface BaseSectionComponentProps 

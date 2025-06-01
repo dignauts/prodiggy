@@ -1,8 +1,15 @@
-// @use '../../../theme/css/responsive.scss' as responsive;
+@use '../../../theme/css/responsive.scss' as responsive;
 
 .DaAssociateCardComponent {
-  &-logo img {
-    display: block;
+  &-logo  {
+    & img {
+      display: block;
+
+      @include responsive.mq(md) {
+        width: 104px;
+        height: 32px;
+      }
+    }
   }
 
   &-root {

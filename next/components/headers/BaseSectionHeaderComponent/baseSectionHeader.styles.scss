@@ -4,6 +4,10 @@
   &-buttons {
     @include responsive.mq(sm) {
       flex-direction: column;
+      
+      & .DaButtonComponent-root {
+        width: 100%;
+      }
     }
   }
 

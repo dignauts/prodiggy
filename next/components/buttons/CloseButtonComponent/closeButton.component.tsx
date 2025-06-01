@@ -2,6 +2,7 @@
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton, Tooltip } from '@mui/material';
 import clsx from 'clsx';
+import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import { forwardRef } from 'react';
 
@@ -15,15 +16,25 @@ const CloseButtonComponent = forwardRef<HTMLButtonElement, CloseButtonComponentP
 
   return (
     <Tooltip disableHoverListener={!enableTooltip} title={t('hamburger.close')}>
-      <IconButton
-        className={clsx(CLOSE_BUTTON_CLASS_NAME.ROOT, className)}
-        color={color}
-        ref={ref}
-        size={size}
-        {...props}
+      <motion.div
+        whileHover={{ 
+          scale: 1.2, 
+          transition: {
+            stiffness: 700,
+            type: 'spring'
+          } 
+        }}
       >
-        <CloseIcon className={CLOSE_BUTTON_CLASS_NAME.ICON} />
-      </IconButton>
+        <IconButton
+          className={clsx(CLOSE_BUTTON_CLASS_NAME.ROOT, className)}
+          color={color}
+          ref={ref}
+          size={size}
+          {...props}
+        >
+          <CloseIcon className={CLOSE_BUTTON_CLASS_NAME.ICON} />
+        </IconButton>
+      </motion.div>
     </Tooltip>
   );
 });

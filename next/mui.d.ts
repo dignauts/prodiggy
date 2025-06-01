@@ -63,12 +63,14 @@ declare module '@mui/material/styles' {
   }
 
   interface TypographyVariants {
+    h2Small: TypographyStyleOptions;
     p2: TypographyStyleOptions;
     p3: TypographyStyleOptions;
     p4: TypographyStyleOptions;
   }
 
   interface TypographyVariantsOptions {
+    h2Small?: TypographyStyleOptions;
     p2?: TypographyStyleOptions;
     p3?: TypographyStyleOptions;
     p4?: TypographyStyleOptions;
@@ -84,6 +86,7 @@ declare module '@mui/material/styles' {
 
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
+    h2Small: true;
     p2: true;
     p3: true;
     p4: true;

@@ -1,8 +1,6 @@
-import { BaseComponentProps } from '#da/types/props/common.props';
+import { AnimatedComponentProps, BaseComponentProps } from '#da/types/props/common.props';
 
-export interface AnimatedFeatureCardComponentProps extends FeatureCardComponentProps {
-  isInView: boolean;
-}
+export type AnimatedFeatureCardComponentProps = AnimatedComponentProps & FeatureCardComponentProps;
 
 export type FeatureCardProps = {
   description: string;

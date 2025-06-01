@@ -2,6 +2,10 @@ import { ReactNode } from 'react';
 
 import { Style } from '#da/types/ui.types';
 
+export interface AnimatedComponentProps {
+  isInView: boolean;
+}
+
 export interface BaseComponentProps {
   className?: string;
   sx?: Style;

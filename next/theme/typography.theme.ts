@@ -18,6 +18,15 @@ export const typography: ThemeOptions['typography'] = {
       fontSize: responsiveFontSize(32)
     }
   },
+  h2Small: {
+    fontFamily: 'var(--prodiggy-font-plus-jakarta-sans)',
+    fontSize: responsiveFontSize(32),
+    letterSpacing: letterSpacing({ percent: -2 }),
+    lineHeight: '125%',
+    [mediaQuery({ breakpoint: 'md' })]: {
+      fontSize: responsiveFontSize(24)
+    }
+  },
   h4: {
     fontFamily: 'var(--prodiggy-font-plus-jakarta-sans)',
     fontSize: responsiveFontSize(24),
@@ -38,7 +47,10 @@ export const typography: ThemeOptions['typography'] = {
   p3: {
     fontSize: responsiveFontSize(16),
     letterSpacing: letterSpacing({ percent: -2 }),
-    lineHeight: '135%'
+    lineHeight: '135%',
+    [mediaQuery({ breakpoint: 'md' })]: {
+      fontSize: responsiveFontSize(14)
+    }
   },
   p4: {
     fontSize: responsiveFontSize(14),
