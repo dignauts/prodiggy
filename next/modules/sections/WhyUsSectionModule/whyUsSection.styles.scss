@@ -27,8 +27,21 @@
     margin: 0;
 
     & .DaFeatureCardComponent {
-      &-root:nth-of-type(2) {
-        @include responsive.mq(sm, min) {
+      &-root {
+        @include responsive.mq(md) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    & > div {
+      @include responsive.mq(md) {
+        margin-inline: 0;
+        width: 100%;
+      }
+
+      &:nth-of-type(2) {
+        @include responsive.mq(md, min) {
           margin-top: calc(7.5*var(--mui-spacing));
         }
       }
