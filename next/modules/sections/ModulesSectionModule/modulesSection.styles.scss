@@ -1,0 +1,9 @@
+@use '../../../theme/css/responsive.scss' as responsive;
+
+.DaModulesSectionModule {
+  &-list {
+    display: grid;
+    gap: calc(5*var(--mui-spacing));
+    grid-template-columns: repeat(3,1fr);
+  }
+}

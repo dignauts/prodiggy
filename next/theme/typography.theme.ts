@@ -27,6 +27,12 @@ export const typography: ThemeOptions['typography'] = {
       fontSize: responsiveFontSize(24)
     }
   },
+  h3: {
+    fontFamily: 'var(--prodiggy-font-plus-jakarta-sans)',
+    fontSize: responsiveFontSize(28),
+    letterSpacing: letterSpacing({ percent: -2 }),
+    lineHeight: '125%'
+  },
   h4: {
     fontFamily: 'var(--prodiggy-font-plus-jakarta-sans)',
     fontSize: responsiveFontSize(24),

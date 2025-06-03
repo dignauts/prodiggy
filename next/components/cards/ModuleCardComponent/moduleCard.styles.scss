@@ -1,0 +1,25 @@
+@use '../../../theme/css/responsive.scss' as responsive;
+
+.DaModuleCardComponent {
+  &-icon {
+    background-color: var(--mui-palette-primary-main);
+    box-sizing: content-box;
+    color: var(--mui-palette-text-primary);
+    margin-bottom: calc(3.5*var(--mui-spacing));
+    max-width: fit-content;
+    padding: calc(1*var(--mui-spacing));
+
+    svg {
+      display: block;
+    }
+  }
+
+  &-root {
+    max-width: 440px;
+    padding: calc(5*var(--mui-spacing));
+  }
+
+  &-title {
+    margin-bottom: calc(2.5*var(--mui-spacing));
+  }
+}
