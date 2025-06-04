@@ -5,5 +5,25 @@
     display: grid;
     gap: calc(5*var(--mui-spacing));
     grid-template-columns: repeat(3,1fr);
+
+    & .DaModuleCardComponent {
+      &-root {
+        @include responsive.mq(md) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    @include responsive.mq(lg) {
+      gap: calc(4*var(--mui-spacing));
+    }
+
+    @include responsive.mq(md) {
+      grid-template-columns: none;
+    }
+
+    @include responsive.mq(lg) {
+      gap: calc(3*var(--mui-spacing));
+    }
   }
 }

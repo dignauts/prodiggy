@@ -11,15 +11,35 @@
 
     svg {
       display: block;
+
+      @include responsive.mq(sm) {
+        font-size: 2rem;
+      }
+    }
+
+    @include responsive.mq(sm) {
+      margin-bottom: calc(2.5*var(--mui-spacing));
     }
   }
 
   &-root {
     max-width: 440px;
     padding: calc(5*var(--mui-spacing));
+
+    @include responsive.mq(lg) {
+      padding: calc(4*var(--mui-spacing));
+    }
+
+    @include responsive.mq(sm) {
+      padding: calc(3*var(--mui-spacing));
+    }
   }
 
   &-title {
     margin-bottom: calc(2.5*var(--mui-spacing));
+
+    @include responsive.mq(sm) {
+      margin-bottom: calc(1.5*var(--mui-spacing));
+    }
   }
 }
