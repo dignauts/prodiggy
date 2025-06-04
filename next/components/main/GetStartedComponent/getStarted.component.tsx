@@ -3,7 +3,7 @@
 import { motion } from 'motion/react';
 import { forwardRef } from 'react';
 
-import GetStartedHeaderComponent from '#da/components/headers/GetStartedHeaderComponent/getStartedHeader.component';
+import GetStartedHeaderComponent from '#da/components/headers/GetStartedHeaderComponent';
 import { GET_STARTED_CLASS_NAME, GET_STARTED_COMPONENT_NAME } from '#da/components/main/GetStartedComponent/getStarted.constants';
 import ImageComponent from '#da/components/main/ImageComponent';
 import { ASSET } from '#da/constants/assets.constants';

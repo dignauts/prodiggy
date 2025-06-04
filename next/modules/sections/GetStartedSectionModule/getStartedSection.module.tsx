@@ -3,7 +3,7 @@
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 
-import GetStartedComponent from '#da/components/main/GetStartedComponent/getStarted.component';
+import GetStartedComponent from '#da/components/main/GetStartedComponent';
 import BaseSectionComponent from '#da/components/sections/BaseSectionComponent';
 
 const GetStartedSectionModule = () => {
