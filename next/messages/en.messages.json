@@ -30,6 +30,9 @@
     "features": "Features",
     "home": "Home"
   },
+  "testimonials_section_module": {
+    "title": "What our customers say"
+  },
   "trusted_by_section_module": {
     "description": "organizations that value innovation, quality, and long-term partnerships. Your brand could be next.",
     "title": "Trusted by"

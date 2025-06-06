@@ -1,13 +1,14 @@
-@use '../../../theme/css/responsive.scss' as responsive;
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
 
 .DaModuleCardComponent {
   &-icon {
     background-color: var(--mui-palette-primary-main);
     box-sizing: content-box;
     color: var(--mui-palette-text-primary);
-    margin-bottom: calc(3.5*var(--mui-spacing));
+    margin-bottom: utils.spacing(3.5);
     max-width: fit-content;
-    padding: calc(1*var(--mui-spacing));
+    padding: utils.spacing(1);
 
     svg {
       display: block;
@@ -18,28 +19,28 @@
     }
 
     @include responsive.mq(sm) {
-      margin-bottom: calc(2.5*var(--mui-spacing));
+      margin-bottom: utils.spacing(2.5);
     }
   }
 
   &-root {
     max-width: 440px;
-    padding: calc(5*var(--mui-spacing));
+    padding: utils.spacing(5);
 
     @include responsive.mq(lg) {
-      padding: calc(4*var(--mui-spacing));
+      padding: utils.spacing(4);
     }
 
     @include responsive.mq(sm) {
-      padding: calc(3*var(--mui-spacing));
+      padding: utils.spacing(3);
     }
   }
 
   &-title {
-    margin-bottom: calc(2.5*var(--mui-spacing));
+    margin-bottom: utils.spacing(2.5);
 
     @include responsive.mq(sm) {
-      margin-bottom: calc(1.5*var(--mui-spacing));
+      margin-bottom: utils.spacing(1.5);
     }
   }
 }

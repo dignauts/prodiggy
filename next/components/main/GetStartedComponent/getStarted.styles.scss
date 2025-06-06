@@ -1,4 +1,5 @@
-@use '../../../theme/css/responsive.scss' as responsive;
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
 
 .DaGetStartedComponent {  
   &-image {
@@ -10,22 +11,22 @@
   &-root {
     background-color: var(--mui-palette-grey-600);
     display: grid;
-    gap: calc(3*var(--mui-spacing));
+    gap: utils.spacing(3);
     grid-template-columns: minmax(0,320px) minmax(0,493px);
     justify-content: space-between;
     margin: 0 auto;
     max-width: responsive.breakpoint(xl);
-    padding: calc(4*var(--mui-spacing));
+    padding: utils.spacing(4);
 
     @include responsive.mq(md) {
-      gap: calc(5*var(--mui-spacing));
+      gap: utils.spacing(5);
       grid-template-columns: none;
       justify-content: initial;
     }
 
     @include responsive.mq(sm) {
-      gap: calc(4*var(--mui-spacing));
-      padding: calc(3*var(--mui-spacing));
+      gap: utils.spacing(4);
+      padding: utils.spacing(3);
     }
   }
 }

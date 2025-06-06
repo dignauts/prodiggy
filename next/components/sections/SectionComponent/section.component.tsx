@@ -8,13 +8,15 @@ import { SectionComponentProps } from '#da/components/sections/SectionComponent/
 import '#da/components/sections/SectionComponent/section.styles.scss';
 
 const SectionComponent: FC<SectionComponentProps> = ({
-  buttons, chip, children, className, description, descriptionVariant, disableMarginBottom, sx, title
+  buttons, chip, children, className, color, containerWidth, description, descriptionVariant, disableMarginBottom, sx, title
 }) => (
   <BaseSectionComponent 
     className={clsx(
       SECTION_CLASS_NAME.ROOT, 
       className
     )}
+    color={color}
+    containerWidth={containerWidth}
     sx={sx}
   >
     <BaseSectionHeaderComponent 

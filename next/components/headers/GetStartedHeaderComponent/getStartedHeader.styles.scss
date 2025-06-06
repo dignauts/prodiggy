@@ -1,17 +1,18 @@
-@use '../../../theme/css/responsive.scss' as responsive;
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
 
 .DaGetStartedHeaderComponent {  
   &-root {
     @include responsive.mq(md) {
-      gap: calc(5*var(--mui-spacing));
+      gap: utils.spacing(5);
     }
 
     @include responsive.mq(sm) {
-      gap: calc(3*var(--mui-spacing));
+      gap: utils.spacing(3);
     }
   }
 
   &-title {
-    margin-bottom: var(--mui-spacing);
+    margin-bottom: utils.spacing(1);
   }
 }
