@@ -1,4 +1,5 @@
-@use '../../../theme/css/responsive.scss' as responsive;
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
 
 .DaBaseSectionHeaderComponent {
   &-buttons {
@@ -12,11 +13,11 @@
   }
 
   &-buttons, &-description {
-    margin-top: calc(5*var(--mui-spacing));
+    margin-top: utils.spacing(5);
   }
 
   &-chip {
-    margin-bottom: calc(5*var(--mui-spacing));
+    margin-bottom: utils.spacing(5);
   }
 
   &-root {

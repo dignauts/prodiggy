@@ -1,7 +1,9 @@
+@use '../../../theme/scss/utils.scss';
+
 .DaSectionComponent {
   &-header {
     &--withMarginBottom {
-      margin-bottom: calc(7.5*var(--mui-spacing));
+      margin-bottom: utils.spacing(7.5);
     }
   }
 }

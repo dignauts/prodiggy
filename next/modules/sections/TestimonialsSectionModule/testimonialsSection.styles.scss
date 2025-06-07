@@ -1,0 +1,14 @@
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
+
+.DaTestimonialsSectionModule {
+  &-masonry {
+    margin: 0 auto;
+
+    & .DaTestimonialCardComponent {
+      &-root {
+        max-width: 100%;
+      }
+    }
+  }
+}

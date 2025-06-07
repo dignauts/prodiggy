@@ -1,5 +1,8 @@
+/* eslint-disable max-lines */
 import { ThemeOptions } from '@mui/material';
 
+import OutlinedStarIconComponent from '#da/components/icons/outlinedStarIcon.component';
+import StarIconComponent from '#da/components/icons/starIcon.component';
 import { FONT_WEIGHT } from '#da/theme/constants.theme';
 import { responsiveFontSize } from '#da/theme/utils/responsiveFontSize.util';
 
@@ -70,6 +73,24 @@ export const components: ThemeOptions['components'] = {
       },
       rounded: {
         borderRadius: 4
+      }
+    }
+  },
+  MuiRating: {
+    defaultProps: {
+      emptyIcon: <OutlinedStarIconComponent fontSize="inherit" />,
+      icon: <StarIconComponent fontSize="inherit" />,
+      precision: 0.5
+    },
+    styleOverrides: {
+      iconEmpty: {
+        color: 'var(--mui-palette-grey-400)'
+      },
+      iconFilled: {
+        color: 'var(--mui-palette-grey-100)'
+      },
+      root: {
+        gap: 'calc(1*var(--mui-spacing))'
       }
     }
   },

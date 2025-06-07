@@ -1,0 +1,21 @@
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
+
+.DaTestimonialCardComponent {
+  &-root {
+    display: flex;
+    flex-direction: column;
+    gap: utils.spacing(2.5);
+    max-width: 320px;
+    padding: utils.spacing(3) utils.spacing(4);
+
+    @include responsive.mq(md) {
+      padding: utils.spacing(2) utils.spacing(3);
+    }
+
+    @include responsive.mq(sm) {
+      gap: utils.spacing(2);
+      padding: utils.spacing(3);
+    }
+  }
+}

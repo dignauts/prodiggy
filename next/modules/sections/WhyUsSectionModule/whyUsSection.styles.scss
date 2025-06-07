@@ -1,11 +1,12 @@
-@use '../../../theme/css/responsive.scss' as responsive;
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
 
 .DaWhyUsSectionModule {
   &-header {
     display: grid;
-    gap: calc(12.5*var(--mui-spacing));
+    gap: utils.spacing(12.5);
     grid-template-columns: repeat(2,1fr);
-    margin-bottom: calc(12.5*var(--mui-spacing));
+    margin-bottom: utils.spacing(12.5);
     max-width: none;
     text-align: initial;
     
@@ -18,8 +19,8 @@
     @include responsive.mq(lg) {
       display: flex;
       flex-direction: column;
-      gap: calc(5*var(--mui-spacing));
-      margin-bottom: calc(10*var(--mui-spacing));
+      gap: utils.spacing(5);
+      margin-bottom: utils.spacing(10);
     }
   }
 
@@ -42,7 +43,7 @@
 
       &:nth-of-type(2) {
         @include responsive.mq(md, min) {
-          margin-top: calc(7.5*var(--mui-spacing));
+          margin-top: utils.spacing(7.5);
         }
       }
     }

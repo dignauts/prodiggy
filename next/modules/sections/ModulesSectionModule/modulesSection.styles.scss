@@ -1,9 +1,10 @@
-@use '../../../theme/css/responsive.scss' as responsive;
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
 
 .DaModulesSectionModule {
   &-list {
     display: grid;
-    gap: calc(5*var(--mui-spacing));
+    gap: utils.spacing(5);
     grid-template-columns: repeat(3,1fr);
 
     & .DaModuleCardComponent {
@@ -15,7 +16,7 @@
     }
 
     @include responsive.mq(lg) {
-      gap: calc(4*var(--mui-spacing));
+      gap: utils.spacing(4);
     }
 
     @include responsive.mq(md) {
@@ -23,7 +24,7 @@
     }
 
     @include responsive.mq(lg) {
-      gap: calc(3*var(--mui-spacing));
+      gap: utils.spacing(3);
     }
   }
 }

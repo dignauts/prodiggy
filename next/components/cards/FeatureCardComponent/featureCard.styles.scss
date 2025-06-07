@@ -1,20 +1,21 @@
-@use '../../../theme/css/responsive.scss' as responsive;
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
 
 .DaFeatureCardComponent {
   &-image {
-    padding-inline: calc(10.5*var(--mui-spacing));
+    padding-inline: utils.spacing(10.5);
     
     & .DaImageComponent-image {
       display: block;
 
       @include responsive.mq(lg, min) {
-        border-top-left-radius: calc(0.5*var(--mui-spacing));
-        border-top-right-radius: calc(0.5*var(--mui-spacing));
+        border-top-left-radius: utils.spacing(0.5);
+        border-top-right-radius: utils.spacing(0.5);
       }
     }
 
     @include responsive.mq(xl) {
-      padding-inline: calc(8*var(--mui-spacing));
+      padding-inline: utils.spacing(8);
     }
 
     @include responsive.mq(lg) {
@@ -28,7 +29,7 @@
 
   &--withImage {
     & .DaFeatureCardHeaderComponent-root {
-      margin-bottom: calc(2.5*var(--mui-spacing));
+      margin-bottom: utils.spacing(2.5);
 
       @include responsive.mq(lg) {
         margin-bottom: 0;
