@@ -38,7 +38,9 @@ export const components: ThemeOptions['components'] = {
   MuiChip: {
     styleOverrides: {
       colorDefault: {
-        backgroundColor: 'var(--mui-palette-grey-600)',
+        backgroundColor: 'var(--mui-palette-grey-600)'
+      },
+      root: {
         borderRadius: 4
       }
     }
@@ -67,6 +69,9 @@ export const components: ThemeOptions['components'] = {
       variant: 'outlined'
     },
     styleOverrides: {
+      elevation: {
+        backgroundColor: 'var(--mui-palette-grey-600)'
+      },
       outlined: {
         backgroundColor: 'var(--mui-palette-grey-500)',
         borderColor: 'var(--mui-palette-grey-400)'

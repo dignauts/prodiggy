@@ -1,0 +1,12 @@
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
+
+.DaSubscriptionCardComponent {
+  &-price {
+    margin-bottom: utils.spacing(2.5);
+  }
+
+  &-subscriptionName {
+    margin-bottom: utils.spacing(3);
+  }
+}

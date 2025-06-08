@@ -6,5 +6,5 @@ enum MUI_SETTINGS {
 type Unit = 'em' | 'rem';
 
 export const responsiveFontSize = (px: number, unit?: Unit) => (
-  `${(px / MUI_SETTINGS.HTML_FONT_SIZE) * (MUI_SETTINGS.FONT_SIZE / 14)}${unit || 'em'}`
+  `${(px / MUI_SETTINGS.HTML_FONT_SIZE) * (MUI_SETTINGS.FONT_SIZE / 14)}${unit || 'rem'}`
 );

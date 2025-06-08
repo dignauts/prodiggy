@@ -48,6 +48,11 @@ export const typography: ThemeOptions['typography'] = {
       fontSize: responsiveFontSize(20)
     }
   },
+  h5: {
+    fontSize: responsiveFontSize(20),
+    letterSpacing: letterSpacing({ percent: -2 }),
+    lineHeight: '130%'
+  },
   p2: {
     fontSize: responsiveFontSize(18),
     letterSpacing: letterSpacing({ percent: -2 }),
@@ -66,6 +71,16 @@ export const typography: ThemeOptions['typography'] = {
   },
   p4: {
     fontSize: responsiveFontSize(14),
+    letterSpacing: letterSpacing({ percent: -2 }),
+    lineHeight: '130%'
+  },
+  p5: {
+    fontSize: responsiveFontSize(12),
+    letterSpacing: letterSpacing({ percent: -8 }),
+    lineHeight: '125%'
+  },
+  price: {
+    fontSize: responsiveFontSize(54),
     letterSpacing: letterSpacing({ percent: -2 }),
     lineHeight: '130%'
   }

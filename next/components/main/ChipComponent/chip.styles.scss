@@ -6,6 +6,12 @@
         font-weight: var(--prodiggy-font-weight-bold);
         height: 35px;
       }
+
+      &-sizeSmall {
+        font: var(--mui-font-p5);
+        font-weight: var(--prodiggy-font-weight-bold);
+        height: 30px;
+      }
     }
   }
 
