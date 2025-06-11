@@ -13,6 +13,7 @@ const ButtonComponent: FC<ButtonComponentProps> = ({
   className, isExternal, isLink, to, ...props 
 }) => (
   <motion.div
+    className={clsx(BUTTON_CLASS_NAME.ROOT, className)}
     whileHover={{ 
       scale: 0.95, 
       transition: {
@@ -22,7 +23,7 @@ const ButtonComponent: FC<ButtonComponentProps> = ({
     }}
   >
     <Button 
-      className={clsx(BUTTON_CLASS_NAME.ROOT, className)} 
+      className={BUTTON_CLASS_NAME.BUTTON} 
       {...isLink && { 
         component: Link, 
         href: to,

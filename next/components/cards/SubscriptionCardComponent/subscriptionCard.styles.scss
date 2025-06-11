@@ -2,6 +2,14 @@
 @use '../../../theme/scss/utils.scss';
 
 .DaSubscriptionCardComponent {
+  &-button {
+    margin-bottom: utils.spacing(3);
+  }
+
+  &-list {
+    margin-bottom: utils.spacing(6);
+  }
+
   &-price {
     margin-bottom: utils.spacing(2.5);
   }
