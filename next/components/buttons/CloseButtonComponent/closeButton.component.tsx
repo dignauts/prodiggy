@@ -17,6 +17,7 @@ const CloseButtonComponent = forwardRef<HTMLButtonElement, CloseButtonComponentP
   return (
     <Tooltip disableHoverListener={!enableTooltip} title={t('hamburger.close')}>
       <motion.div
+        className={clsx(CLOSE_BUTTON_CLASS_NAME.ROOT, className)}
         whileHover={{ 
           scale: 1.2, 
           transition: {
@@ -26,7 +27,7 @@ const CloseButtonComponent = forwardRef<HTMLButtonElement, CloseButtonComponentP
         }}
       >
         <IconButton
-          className={clsx(CLOSE_BUTTON_CLASS_NAME.ROOT, className)}
+          className={CLOSE_BUTTON_CLASS_NAME.BUTTON}
           color={color}
           ref={ref}
           size={size}

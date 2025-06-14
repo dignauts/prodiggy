@@ -1,0 +1,23 @@
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
+
+.DaSubscriptionCardComponent {
+  &-button {
+    margin-bottom: utils.spacing(3);
+  }
+
+  &-price {
+    margin-bottom: utils.spacing(2.5);
+  }
+
+  &-root {
+    display: flex;
+    flex-direction: column;
+    gap: utils.spacing(6);
+    max-width: 386px;
+  }
+
+  &-subscriptionName {
+    margin-bottom: utils.spacing(3);
+  }
+}

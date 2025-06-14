@@ -1,6 +1,6 @@
 import { TestimonialCardProps } from '#da/components/cards/TestimonialCardComponent/testimonialCard.props';
 
-export const testimonialsCardsFakes: TestimonialCardProps[] = [
+export const testimonialsFakes: TestimonialCardProps[] = [
   {
     children: 'Prodiggy has made budgeting almost effortless. I can finally see where my money goes without needing a spreadsheet. It’s modern, sleek, and incredibly useful.',
     rating: 4,

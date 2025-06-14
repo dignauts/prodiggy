@@ -1,0 +1,38 @@
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
+
+.DaPricingSectionModule {
+  &-list {
+    display: grid;
+    gap: utils.spacing(3);
+    grid-template-columns: repeat(3, 1fr);
+
+    & .DaSubscriptionCardComponent {
+      &-root {
+        height: 100%;
+        justify-content: space-between;
+        max-width: 100%;
+
+        &--animated {
+          &:last-of-type {
+            @include responsive.mq(lg) {
+              grid-column: span 2;
+            }
+
+            @include responsive.mq(sm) {
+              grid-column: inherit
+            }
+          }
+        }
+      }
+    }
+
+    @include responsive.mq(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive.mq(sm) {
+      grid-template-columns: none;
+    }
+  }
+}

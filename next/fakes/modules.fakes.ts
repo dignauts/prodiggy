@@ -1,6 +1,6 @@
 import { ModuleCardProps } from '#da/components/cards/ModuleCardComponent/moduleCard.props';
 
-export const modulesCardsFakes: ModuleCardProps[] = [
+export const modulesFakes: ModuleCardProps[] = [
   {
     description: 'Our finance app is intuitive, easy to navigate, and simple to understand — ideal for users of all ages and backgrounds.',
     iconType: 'blocks',

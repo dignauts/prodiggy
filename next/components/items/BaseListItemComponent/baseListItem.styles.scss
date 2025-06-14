@@ -1,0 +1,20 @@
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
+
+.DaBaseListItemComponent {
+  &-root {
+    align-items: center;
+    display: flex;
+    gap: utils.spacing(1.5);
+    list-style: none;
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include responsive.mq(sm) {
+      gap: utils.spacing(1);
+    }
+  }
+}

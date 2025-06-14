@@ -6,7 +6,7 @@ import { useRef } from 'react';
 
 import { AnimatedModuleCardComponent } from '#da/components/cards/ModuleCardComponent';
 import SectionComponent from '#da/components/sections/SectionComponent';
-import { modulesCardsFakes } from '#da/fakes/modulesCards.fakes';
+import { modulesFakes } from '#da/fakes/modules.fakes';
 import { MODULES_SECTION_CLASS_NAME } from '#da/modules/sections/ModulesSectionModule/modulesSection.constants';
 import '#da/modules/sections/ModulesSectionModule/modulesSection.styles.scss';
 
@@ -35,7 +35,7 @@ const ModulesSectionModule = () => {
         }}
       >
         {
-          modulesCardsFakes.map((moduleCard, index) => (
+          modulesFakes.map((moduleCard, index) => (
             <AnimatedModuleCardComponent
               key={`ModulesSectionModule-ModuleCardComponent-${moduleCard.title}-${index}`}
               {...moduleCard}
