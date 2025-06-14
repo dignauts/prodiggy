@@ -1,0 +1,38 @@
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
+
+.DaPrimaryFooterModule {
+  &-aboutUs {
+    & .DaProdiggyLogoComponent-root {
+      margin-bottom: utils.spacing(3);
+    }
+  }
+
+  &-container {
+    display: grid;
+    gap: utils.spacing(6);
+    grid-template-columns: minmax(0, 400px) 1fr;
+    margin-bottom: utils.spacing(8);
+
+    @include responsive.mq(lg) {
+      gap: utils.spacing(4);
+      grid-template-columns: none;
+      margin-bottom: utils.spacing(6);
+    }
+  }
+
+  &-navigationBlocks {
+    @include responsive.mq(lg) {
+      gap: utils.spacing(6);
+    }
+
+    @include responsive.mq(lg) {
+      flex-direction: column;
+      gap: utils.spacing(4);
+    }
+  }
+
+  &-root {
+    padding: 60px 0 32px 0;
+  }
+}
