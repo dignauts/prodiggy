@@ -8,12 +8,12 @@ import WhyUsSectionModule from '#da/modules/sections/WhyUsSectionModule';
 
 const Home = () => (
   <>
-    <HeroSectionModule />
+    { /* <HeroSectionModule />
     <WhyUsSectionModule />
     <TrustedBySectionModule />
     <PricingSectionModule />
     <ModulesSectionModule />
-    <TestimonialsSectionModule />
+    <TestimonialsSectionModule /> */ }
     <GetStartedSectionModule />
   </>
 );

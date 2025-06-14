@@ -1,0 +1,8 @@
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
+
+.DaLabeledListComponent {
+  &-title {
+    margin-bottom: utils.spacing(2);
+  }
+}
