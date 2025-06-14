@@ -7,7 +7,7 @@ import { useRef } from 'react';
 
 import { AnimatedTestimonialCardComponent } from '#da/components/cards/TestimonialCardComponent';
 import SectionComponent from '#da/components/sections/SectionComponent';
-import { testimonialsCardsFakes } from '#da/fakes/testimonialsCards.fakes';
+import { testimonialsFakes } from '#da/fakes/testimonials.fakes';
 import { TESTIMONIALS_SECTION_CLASS_NAME } from '#da/modules/sections/TestimonialsSectionModule/testimonialsSection.constants';
 import '#da/modules/sections/TestimonialsSectionModule/testimonialsSection.styles.scss';
 
@@ -16,7 +16,7 @@ const TestimonialsSectionModule = () => {
   const masonryRef = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(masonryRef);
 
-  return testimonialsCardsFakes.length > 0 && (
+  return testimonialsFakes.length > 0 && (
     <SectionComponent 
       className={TESTIMONIALS_SECTION_CLASS_NAME.ROOT}
       color='tertiary'
@@ -42,7 +42,7 @@ const TestimonialsSectionModule = () => {
         }}
       >
         {
-          testimonialsCardsFakes.map((card, index) => (
+          testimonialsFakes.map((card, index) => (
             <AnimatedTestimonialCardComponent
               isInView={isInView}
               key={`TestimonialsSectionModule-AnimatedTestimonialCardComponent-${card.username}-${index}`}

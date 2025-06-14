@@ -1,6 +1,6 @@
 import { FeatureCardProps } from '#da/components/cards/FeatureCardComponent/featureCard.props';
 
-export const whyUsCardsFakes: FeatureCardProps[] = [
+export const whyUsFakes: FeatureCardProps[] = [
   {
     description: 'Transactions are automatically categorized by merchant and type, making it easy for users to understand where their money goes.',
     icon: 'icons/40x40/spiral.svg',

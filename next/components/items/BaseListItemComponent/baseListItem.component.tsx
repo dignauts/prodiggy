@@ -2,6 +2,7 @@
 
 import { Box, Typography } from '@mui/material';
 import clsx from 'clsx';
+import { motion } from 'motion/react';
 import { forwardRef } from 'react';
 
 import { BASE_LIST_ITEM_CLASS_NAME, BASE_LIST_ITEM_COMPONENT_NAME } from '#da/components/items/BaseListItemComponent/baseListItem.constants';
@@ -18,11 +19,31 @@ const BaseListItemComponent = forwardRef<HTMLLIElement, BaseListItemComponentPro
     sx={sx}
   >
     {
-      Icon && <Icon className={BASE_LIST_ITEM_CLASS_NAME.ICON} fontSize='small' />
+      Icon && (
+        <motion.div
+          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0 }}
+          transition={{
+            duration: 0.6,
+            scale: { type: 'spring', visualDuration: 0.5, bounce: 0.3 }
+          }}
+        >
+          <Icon className={BASE_LIST_ITEM_CLASS_NAME.ICON} fontSize='small' />
+        </motion.div>
+      )
     }
-    <Typography className={BASE_LIST_ITEM_CLASS_NAME.TEXT} variant='p3'>
-      { children }
-    </Typography>
+    <motion.div
+      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, scale: 0 }}
+      transition={{
+        duration: 0.4,
+        scale: { type: 'spring', visualDuration: 0.4, bounce: 0.5 }
+      }}
+    >
+      <Typography className={BASE_LIST_ITEM_CLASS_NAME.TEXT} variant='p3'>
+        { children }
+      </Typography>
+    </motion.div>
   </Box>
 ));
 

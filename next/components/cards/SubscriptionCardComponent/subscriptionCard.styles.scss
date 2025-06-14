@@ -6,12 +6,15 @@
     margin-bottom: utils.spacing(3);
   }
 
-  &-list {
-    margin-bottom: utils.spacing(6);
-  }
-
   &-price {
     margin-bottom: utils.spacing(2.5);
+  }
+
+  &-root {
+    display: flex;
+    flex-direction: column;
+    gap: utils.spacing(6);
+    max-width: 386px;
   }
 
   &-subscriptionName {
