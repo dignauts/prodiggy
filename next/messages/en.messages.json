@@ -6,7 +6,9 @@
     "view_demo": "View demo"
   },
   "common": {
-    "app_version": "v{version}"
+    "app_version": "v{version}",
+    "pages": "Pages",
+    "social_media": "Social media"
   },
   "get_started_section_module": {
     "description": "Take the first step to growing your business",
@@ -34,6 +36,10 @@
   "pricing_section_module": {
     "notice": "No need to provide a credit card",
     "title": "Choose the Right Plan for You"
+  },
+  "primary_footer_module": {
+    "about_us": "We make everyday money management simple. We show you where your budget goes and how to take control of it again.",
+    "copyright": "{year} © All rights reserved by Prodiggy."
   },
   "testimonials_section_module": {
     "title": "What our customers say"
