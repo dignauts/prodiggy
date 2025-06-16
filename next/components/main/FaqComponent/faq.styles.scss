@@ -1,0 +1,38 @@
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
+
+.DaFaqComponent {
+  &-content {
+    color: var(--mui-palette-text-secondary);
+  }
+
+  &-header {
+    & .MuiAccordionSummary {
+      &-expandIconWrapper {
+        border-radius: 50%;
+        box-sizing: content-box;
+        color: inherit;
+        padding: utils.spacing(1.5);
+        transition: background-color .25s ease-out, transform .25s ease-out;
+
+        &.Mui-expanded {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  &-root {
+    background-color: var(--mui-palette-background-default);
+    box-shadow: none;
+    margin-bottom: utils.spacing(2);
+
+    &.Mui-expanded .MuiAccordionSummary-expandIconWrapper {
+      background-color: var(--mui-palette-primary-main);
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
