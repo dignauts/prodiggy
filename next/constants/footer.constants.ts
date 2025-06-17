@@ -29,11 +29,6 @@ export const FOOTER_NAVIGATION_BLOCKS: LabeledListComponentProps[] = [
       },
       {
         isExternal: true,
-        name: 'X',
-        to: '#'
-      },
-      {
-        isExternal: true,
         name: 'Dribbble',
         to: '#'
       },

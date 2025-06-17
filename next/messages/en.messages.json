@@ -7,8 +7,13 @@
   },
   "common": {
     "app_version": "v{version}",
+    "no_results": "No results",
     "pages": "Pages",
     "social_media": "Social media"
+  },
+  "faq_section_module": {
+    "description": "Lorem ipsum dolor sit amet consectetur. Dolor adipiscing tortor ut lobortis in montes. Purus.",
+    "title": "Frequently\nasked questions"
   },
   "get_started_section_module": {
     "description": "Take the first step to growing your business",

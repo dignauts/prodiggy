@@ -7,6 +7,11 @@ import { FONT_WEIGHT } from '#da/theme/constants.theme';
 import { responsiveFontSize } from '#da/theme/utils/responsiveFontSize.util';
 
 export const components: ThemeOptions['components'] = {
+  MuiAccordion: {
+    defaultProps: {
+      disableGutters: true
+    }
+  },
   MuiButton: {
     defaultProps: {
       variant: 'contained'
