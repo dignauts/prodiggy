@@ -1,0 +1,41 @@
+@use '../../../theme/scss/responsive.scss';
+@use '../../../theme/scss/utils.scss';
+
+.DaFaqSectionModule {
+  &-root {
+    & .DaBaseSectionComponent {
+      &-container {
+        display: grid;
+        gap: utils.spacing(4);
+        grid-template-columns: auto minmax(0, 900px);
+
+        @include responsive.mq(lg) {
+          grid-template-columns: none;
+        }
+      }
+    }
+
+    & .DaBaseSectionHeaderComponent {
+      &-description {
+        margin-top: utils.spacing(2.5);
+      }
+
+      &-root {
+        margin-bottom: 0;
+        max-width: 394px;
+
+        @include responsive.mq(lg, min) {
+          height: min-content;
+          left: 0;
+          position: sticky;
+          text-align: initial;
+          top: 0;
+        }
+      }
+
+      &-title {
+        white-space: pre-line;
+      }
+    }
+  }
+}

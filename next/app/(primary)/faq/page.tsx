@@ -1,9 +1,12 @@
-import FaqComponent from '#da/components/main/FaqComponent';
+'use client';
+
+import FaqSectionModule from '#da/modules/sections/FaqSectionModule';
+import GetStartedSectionModule from '#da/modules/sections/GetStartedSectionModule';
 
 const Faq = () => (
   <>
-    <FaqComponent />
-    <FaqComponent />
+    <FaqSectionModule />
+    <GetStartedSectionModule />
   </>
 );
 
